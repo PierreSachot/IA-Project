@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
 
 namespace Source_Projet_IA
 {
@@ -16,6 +17,8 @@ namespace Source_Projet_IA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            /*XML_Reader reader = new XML_Reader();
+            reader.GetQuestion(0);*/
             Application.Run(new Form1());
         }
     }

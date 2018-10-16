@@ -79,12 +79,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{6b9059f5-917d-460f-92ee-4ac4ee3fd4b3}</Project>
+    <ProjectReference Include="..\IA_DAL\DAL.csproj">
+      <Project>{d47299cb-0e19-47e2-bd19-a225512a7f2c}</Project>
       <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{f10d5fe4-da3f-43ac-aa3a-20c7b11c6c43}</Project>
+    <ProjectReference Include="..\IA_Domain\Domain.csproj">
+      <Project>{e74f70d1-3593-46d9-a1a8-56ea8d4ce08c}</Project>
       <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
