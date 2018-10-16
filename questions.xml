@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+	<question>
+		<title>L’algorithme MinMax est :</title>
+		<answer>Utilisé en I.A. pour jouer à deux contre un adversaire.</answer>
+		<answer>Utilisé en I.A. pour trouver le plus court chemin dans un graphe.</answer>
+		<answer>Utilisé en reconnaissance des formes pour détecter un isomorphisme de graphe</answer>
+		<answer>Utilisé pour la détection de contours en vision par ordinateur</answer>
+	</question>
+	<question>
+		<title>Soit M une matrice d’adjacence de taille NxN remplie avec des « a », des « b » ou éventuellement avec des « 0 » en cas d’absence de relation. On considère le code ci-dessous :\nint cpt = 0 ;\nfor (int i=0 ; i<n ; i++)\n     for (int j=0 ; j<n ; j++)\n         X\nPar quoi faut-il remplacer X pour compter le nombre de relations non symétriques du graphe ?</title>
+		<answer>if ((M[i,j] == "a") || (M[i,j]== "b")) cpt++ ;</answer>
+		<answer>if ((M[i,j] != "0") && (M[j,i] != M[i,j])) cpt++ ;</answer>
+		<answer>Ni a, ni b, il faut d’abord modifier les lignes précédentes.</answer>
+	</question>
+</questions>
