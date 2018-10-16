@@ -9,12 +9,16 @@ namespace Domain
     public class Question
     {
         public string Title { get; set; }
+        public string ImgURL { get; set; }
         public List<string> LAnswers { get; set; }
+        public int CorrectAnswer { get; set; }
 
-        public Question(string title, List<string> lAnswers)
+        public Question(string title, string imgURL, List<string> lAnswers, int correctAnswer)
         {
             Title = title;
+            ImgURL = imgURL;
             LAnswers = lAnswers;
+            CorrectAnswer = correctAnswer;
         }
     }
 }

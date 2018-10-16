@@ -15,18 +15,22 @@ namespace DAL
         public XML_Reader()
         {
             XmlFile = new XmlDocument();
-            XmlFile.Load("./questions.xml");
+            XmlFile.Load(@"./questions.xml");
         }
 
         public Question GetQuestion(int index)
         {
-            Question q;
-            foreach (XmlNode node in XmlFile.DocumentElement.ChildNodes)
-            {
-                string text = node.InnerText; //or loop through its children as well
-                Console.WriteLine(text);
-            }
-            return null;
+            List<String> lAnswers = new List<string>();
+
+            string question = XmlFile.DocumentElement.ChildNodes[index].ChildNodes[0]?.InnerText;
+            string imgURL = XmlFile.DocumentElement.ChildNodes[index].ChildNodes[1]?.InnerText;
+            int correctAnswer = int.Parse(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[2]?.InnerText);
+            lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[3]?.InnerText);
+            lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[4]?.InnerText);
+            lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[5]?.InnerText);
+            lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[6]?.InnerText);
+
+            return new Question(question, imgURL, lAnswers, correctAnswer);
         }
     }
 }

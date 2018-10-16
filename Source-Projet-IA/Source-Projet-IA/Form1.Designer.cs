@@ -33,6 +33,8 @@
             this.labelAnswer2 = new System.Windows.Forms.Label();
             this.labelAnswer3 = new System.Windows.Forms.Label();
             this.labelAnswer4 = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // labelQuestion
@@ -42,65 +44,79 @@
             this.labelQuestion.Font = new System.Drawing.Font("Monotype Corsiva", 20.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuestion.ForeColor = System.Drawing.Color.DodgerBlue;
             this.labelQuestion.Location = new System.Drawing.Point(324, 27);
+            this.labelQuestion.Margin = new System.Windows.Forms.Padding(50, 0, 50, 0);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(112, 34);
             this.labelQuestion.TabIndex = 0;
             this.labelQuestion.Text = "Question";
             this.labelQuestion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelQuestion.Click += new System.EventHandler(this.labelQuestion_Click);
             // 
             // labelAnswer1
             // 
             this.labelAnswer1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelAnswer1.AutoSize = true;
             this.labelAnswer1.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnswer1.Location = new System.Drawing.Point(343, 120);
+            this.labelAnswer1.Location = new System.Drawing.Point(343, 276);
             this.labelAnswer1.Name = "labelAnswer1";
             this.labelAnswer1.Size = new System.Drawing.Size(71, 16);
             this.labelAnswer1.TabIndex = 1;
             this.labelAnswer1.Text = "answer1";
-            this.labelAnswer1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelAnswer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelAnswer2
             // 
             this.labelAnswer2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelAnswer2.AutoSize = true;
             this.labelAnswer2.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnswer2.Location = new System.Drawing.Point(343, 157);
+            this.labelAnswer2.Location = new System.Drawing.Point(343, 313);
             this.labelAnswer2.Name = "labelAnswer2";
             this.labelAnswer2.Size = new System.Drawing.Size(71, 16);
             this.labelAnswer2.TabIndex = 2;
             this.labelAnswer2.Text = "answer2";
-            this.labelAnswer2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelAnswer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelAnswer3
             // 
             this.labelAnswer3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelAnswer3.AutoSize = true;
             this.labelAnswer3.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnswer3.Location = new System.Drawing.Point(343, 194);
+            this.labelAnswer3.Location = new System.Drawing.Point(343, 350);
             this.labelAnswer3.Name = "labelAnswer3";
             this.labelAnswer3.Size = new System.Drawing.Size(71, 16);
             this.labelAnswer3.TabIndex = 3;
             this.labelAnswer3.Text = "answer3";
-            this.labelAnswer3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelAnswer3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelAnswer4
             // 
             this.labelAnswer4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelAnswer4.AutoSize = true;
             this.labelAnswer4.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnswer4.Location = new System.Drawing.Point(343, 224);
+            this.labelAnswer4.Location = new System.Drawing.Point(343, 383);
             this.labelAnswer4.Name = "labelAnswer4";
             this.labelAnswer4.Size = new System.Drawing.Size(71, 16);
             this.labelAnswer4.TabIndex = 4;
             this.labelAnswer4.Text = "answer4";
-            this.labelAnswer4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelAnswer4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox.Location = new System.Drawing.Point(80, 73);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(656, 200);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox.TabIndex = 5;
+            this.pictureBox.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(800, 432);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.labelAnswer4);
             this.Controls.Add(this.labelAnswer3);
             this.Controls.Add(this.labelAnswer2);
@@ -108,6 +124,7 @@
             this.Controls.Add(this.labelQuestion);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,6 +137,7 @@
         private System.Windows.Forms.Label labelAnswer2;
         private System.Windows.Forms.Label labelAnswer3;
         private System.Windows.Forms.Label labelAnswer4;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }
 
