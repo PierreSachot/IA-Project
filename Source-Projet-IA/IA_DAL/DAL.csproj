@@ -44,9 +44,6 @@
     <Compile Include="XML_Reader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="questions.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\IA_Domain\Domain.csproj">
       <Project>{e74f70d1-3593-46d9-a1a8-56ea8d4ce08c}</Project>
       <Name>Domain</Name>
