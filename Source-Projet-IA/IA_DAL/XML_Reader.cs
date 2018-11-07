@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using Domain;
-using System.Linq;
 
 namespace DAL
 {
@@ -26,18 +25,19 @@ namespace DAL
             string question = XmlFile.DocumentElement.ChildNodes[index].ChildNodes[0]?.InnerText;
             string imgURL = XmlFile.DocumentElement.ChildNodes[index].ChildNodes[1]?.InnerText;
             int correctAnswer = int.Parse(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[2]?.InnerText);
-            lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[3]?.InnerText);
+            int nbPoints = int.Parse(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[3]?.InnerText);
             lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[4]?.InnerText);
             lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[5]?.InnerText);
             lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[6]?.InnerText);
+            lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[7]?.InnerText);
 
-            return new Question(question, imgURL, lAnswers, correctAnswer);
+            return new Question(question, imgURL, lAnswers, correctAnswer, nbPoints);
         }
 
-        public int GetQuestionNumber()
+        public int GetNumberOfQuestions()
         {
             var nodeCount = 0;
-            using (var reader = XmlReader.Create(XmlFile))
+            using (var reader = XmlReader.Create(@"./questions.xml"))
             {
                 while (reader.Read())
                 {
@@ -48,7 +48,7 @@ namespace DAL
                     }
                 }
             }
-            return XmlFile.XPathSelectElements("//submenuid").Count();
+            return nodeCount;
         }
     }
 }

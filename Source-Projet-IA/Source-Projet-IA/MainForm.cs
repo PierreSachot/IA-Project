@@ -17,8 +17,7 @@ namespace Source_Projet_IA
         Questionnaire questionnaire;
         public MainForm()
         {
-            XML_Reader reader = new XML_Reader();
-            questionnaire = new Questionnaire(reader, this);
+            questionnaire = new Questionnaire(this);
             InitializeComponent();
         }
 

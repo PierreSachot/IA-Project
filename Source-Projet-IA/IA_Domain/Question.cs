@@ -12,13 +12,15 @@ namespace Domain
         public string ImgURL { get; set; }
         public List<string> LAnswers { get; set; }
         public int CorrectAnswer { get; set; }
+        public int NbPoints { get; set; }
 
-        public Question(string title, string imgURL, List<string> lAnswers, int correctAnswer)
+        public Question(string title, string imgURL, List<string> lAnswers, int correctAnswer, int nbPoints)
         {
             Title = title;
             ImgURL = imgURL;
             LAnswers = lAnswers;
             CorrectAnswer = correctAnswer;
+            NbPoints = nbPoints;
         }
     }
 }

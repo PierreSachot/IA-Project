@@ -6,65 +6,87 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using System.Threading;
-using DAL;
 using Domain;
+using IA_DAL;
 
 namespace Source_Projet_IA
 {
     public partial class Questionnaire : Form
     {
-        private XML_Reader Reader { get; set; }
-        private Question CurrentQuestion { get; set; }
-        private Form Parent { get; set; }
-        public Questionnaire(XML_Reader reader, Form parent)
+        private Controller CurrentController;
+        private Form MainForm;
+
+        public Questionnaire(Form form)
         {
-            Parent = parent;
+            MainForm = form;
+            CurrentController = new Controller();
             InitializeComponent();
             Thread.Sleep(100);
-            Reader = reader;
             LoadQuestion();
         }
         public void LoadQuestion()
         {
-            Random random = new Random();
-            int val = random.Next(0, 2);
-            CurrentQuestion = Reader.GetQuestion(val);
-            dynamicQuestionLabel.Text = CurrentQuestion.Title;
-            linkLabel1.Text = CurrentQuestion.LAnswers[0];
-            linkLabel2.Text = CurrentQuestion.LAnswers[1];
-            linkLabel3.Text = CurrentQuestion.LAnswers[2];
-            linkLabel4.Text = CurrentQuestion.LAnswers[3];
-            ResizeComponents();
-            if (CurrentQuestion.ImgURL == "")
+            try
             {
-                pictureBox.Hide();
+                CurrentController.LoadNextQuestion();
+                dynamicQuestionLabel.Text = CurrentController.CurrentQuestion.Title;
+                labelQuestions.Text = CurrentController.QuestionsTraitees.Count+"/20";
+                linkLabel1.Text = CurrentController.CurrentQuestion.LAnswers[0];
+                linkLabel2.Text = CurrentController.CurrentQuestion.LAnswers[1];
+                linkLabel3.Text = CurrentController.CurrentQuestion.LAnswers[2];
+                linkLabel4.Text = CurrentController.CurrentQuestion.LAnswers[3];
+                ResizeComponents();
+                if (CurrentController.CurrentQuestion.ImgURL == "")
+                {
+                    groupBoxReponses.Anchor = System.Windows.Forms.AnchorStyles.Top;
+                    pictureBox.Hide();
+                }
+                else
+                {
+                    pictureBox.Image = Image.FromFile(CurrentController.CurrentQuestion.ImgURL);
+                    pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                    pictureBox.Show();
+                    groupBoxReponses.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+                }
             }
-            else
+            catch(Exception e)
             {
-                pictureBox.Image = Image.FromFile(CurrentQuestion.ImgURL);
-                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-                pictureBox.Show();
+                MessageBox.Show(e.Message,
+                "Erreur",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error,
+                MessageBoxDefaultButton.Button1);
             }
         }
 
         public void ResizeComponents()
         {
-            linkLabel1.Left = (this.ClientSize.Width / 2) - (linkLabel1.Width / 2);
-            linkLabel2.Left = (this.ClientSize.Width / 2) - (linkLabel2.Width / 2);
-            linkLabel3.Left = (this.ClientSize.Width / 2) - (linkLabel3.Width / 2);
-            linkLabel4.Left = (this.ClientSize.Width / 2) - (linkLabel4.Width / 2);
+            linkLabel1.Left = (this.groupBoxReponses.Width / 2) - (linkLabel1.Width / 2);
+            linkLabel2.Left = (this.groupBoxReponses.Width / 2) - (linkLabel2.Width / 2);
+            linkLabel3.Left = (this.groupBoxReponses.Width / 2) - (linkLabel3.Width / 2);
+            linkLabel4.Left = (this.groupBoxReponses.Width / 2) - (linkLabel4.Width / 2);
         }
 
-        private void buttonNext_Click(object sender, EventArgs e)
+        // procédure appelée lors d'un clique sur une réponse.
+        private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            int nb = ((int)((LinkLabel)sender).Tag);
+            CurrentController.SetResponse(nb);
             LoadQuestion();
         }
 
-        private void Questionnaire_Deactivate(object sender, EventArgs e)
+        private void buttonRecommencer_Click(object sender, EventArgs e)
         {
-            this.Parent.Close();
+            MainForm.Show();
+            this.Close();
+        }
+
+        private void Questionnaire_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
