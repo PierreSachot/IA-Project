@@ -16,9 +16,11 @@ namespace Source_Projet_IA
     public partial class Questionnaire : Form
     {
         private XML_Reader Reader { get; set; }
-        private Question currentQuestion { get; set; }
-        public Questionnaire(XML_Reader reader)
+        private Question CurrentQuestion { get; set; }
+        private Form Parent { get; set; }
+        public Questionnaire(XML_Reader reader, Form parent)
         {
+            Parent = parent;
             InitializeComponent();
             Thread.Sleep(100);
             Reader = reader;
@@ -28,20 +30,21 @@ namespace Source_Projet_IA
         {
             Random random = new Random();
             int val = random.Next(0, 2);
-            currentQuestion = Reader.GetQuestion(val);
-            dynamicQuestionLabel.Text = currentQuestion.Title;
-            linkLabel1.Text = currentQuestion.LAnswers[0];
-            linkLabel2.Text = currentQuestion.LAnswers[1];
-            linkLabel3.Text = currentQuestion.LAnswers[2];
-            linkLabel4.Text = currentQuestion.LAnswers[3];
+            CurrentQuestion = Reader.GetQuestion(val);
+            dynamicQuestionLabel.Text = CurrentQuestion.Title;
+            linkLabel1.Text = CurrentQuestion.LAnswers[0];
+            linkLabel2.Text = CurrentQuestion.LAnswers[1];
+            linkLabel3.Text = CurrentQuestion.LAnswers[2];
+            linkLabel4.Text = CurrentQuestion.LAnswers[3];
             ResizeComponents();
-            if (currentQuestion.ImgURL == "")
+            if (CurrentQuestion.ImgURL == "")
             {
                 pictureBox.Hide();
             }
             else
             {
-                pictureBox.Image = Image.FromFile(currentQuestion.ImgURL);
+                pictureBox.Image = Image.FromFile(CurrentQuestion.ImgURL);
+                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                 pictureBox.Show();
             }
         }
@@ -57,6 +60,11 @@ namespace Source_Projet_IA
         private void buttonNext_Click(object sender, EventArgs e)
         {
             LoadQuestion();
+        }
+
+        private void Questionnaire_Deactivate(object sender, EventArgs e)
+        {
+            this.Parent.Close();
         }
     }
 }

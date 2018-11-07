@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using Domain;
+using System.Linq;
 
 namespace DAL
 {
@@ -31,6 +32,23 @@ namespace DAL
             lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[6]?.InnerText);
 
             return new Question(question, imgURL, lAnswers, correctAnswer);
+        }
+
+        public int GetQuestionNumber()
+        {
+            var nodeCount = 0;
+            using (var reader = XmlReader.Create(XmlFile))
+            {
+                while (reader.Read())
+                {
+                    if (reader.NodeType == XmlNodeType.Element &&
+                        reader.Name == "question")
+                    {
+                        nodeCount++;
+                    }
+                }
+            }
+            return XmlFile.XPathSelectElements("//submenuid").Count();
         }
     }
 }

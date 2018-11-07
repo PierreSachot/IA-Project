@@ -32,7 +32,7 @@
             this.dynamicQuestionLabel = new System.Windows.Forms.Label();
             this.questionLabel = new System.Windows.Forms.Label();
             this.panelAnswers = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxReponses = new System.Windows.Forms.GroupBox();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
@@ -42,7 +42,7 @@
             this.buttonNext = new System.Windows.Forms.Button();
             this.panelQuestion.SuspendLayout();
             this.panelAnswers.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxReponses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.panelSubmit.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +84,7 @@
             // 
             // panelAnswers
             // 
-            this.panelAnswers.Controls.Add(this.groupBox1);
+            this.panelAnswers.Controls.Add(this.groupBoxReponses);
             this.panelAnswers.Controls.Add(this.pictureBox);
             this.panelAnswers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAnswers.Location = new System.Drawing.Point(0, 53);
@@ -92,22 +92,25 @@
             this.panelAnswers.Size = new System.Drawing.Size(800, 397);
             this.panelAnswers.TabIndex = 1;
             // 
-            // groupBox1
+            // groupBoxReponses
             // 
-            this.groupBox1.Controls.Add(this.linkLabel4);
-            this.groupBox1.Controls.Add(this.linkLabel3);
-            this.groupBox1.Controls.Add(this.linkLabel2);
-            this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 237);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 160);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBoxReponses.Controls.Add(this.linkLabel4);
+            this.groupBoxReponses.Controls.Add(this.linkLabel3);
+            this.groupBoxReponses.Controls.Add(this.linkLabel2);
+            this.groupBoxReponses.Controls.Add(this.linkLabel1);
+            this.groupBoxReponses.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBoxReponses.Location = new System.Drawing.Point(0, 237);
+            this.groupBoxReponses.Name = "groupBoxReponses";
+            this.groupBoxReponses.Size = new System.Drawing.Size(800, 160);
+            this.groupBoxReponses.TabIndex = 7;
+            this.groupBoxReponses.TabStop = false;
+            this.groupBoxReponses.Text = "Réponses";
             // 
             // linkLabel4
             // 
+            this.linkLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Location = new System.Drawing.Point(76, 88);
             this.linkLabel4.Name = "linkLabel4";
@@ -118,8 +121,11 @@
             // 
             // linkLabel3
             // 
+            this.linkLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(76, 63);
+            this.linkLabel3.Location = new System.Drawing.Point(76, 68);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(55, 13);
             this.linkLabel3.TabIndex = 2;
@@ -128,8 +134,11 @@
             // 
             // linkLabel2
             // 
+            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(76, 50);
+            this.linkLabel2.Location = new System.Drawing.Point(76, 49);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(55, 13);
             this.linkLabel2.TabIndex = 1;
@@ -138,8 +147,11 @@
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(73, 33);
+            this.linkLabel1.Location = new System.Drawing.Point(76, 30);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(55, 13);
             this.linkLabel1.TabIndex = 0;
@@ -180,17 +192,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelSubmit);
             this.Controls.Add(this.panelAnswers);
             this.Controls.Add(this.panelQuestion);
+            this.MinimizeBox = false;
             this.Name = "Questionnaire";
             this.Text = "Questionnaire";
+            this.Deactivate += new System.EventHandler(this.Questionnaire_Deactivate);
             this.panelQuestion.ResumeLayout(false);
             this.panelQuestion.PerformLayout();
             this.panelAnswers.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxReponses.ResumeLayout(false);
+            this.groupBoxReponses.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.panelSubmit.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -207,7 +222,7 @@
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxReponses;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
