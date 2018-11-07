@@ -18,17 +18,14 @@ namespace Source_Projet_IA
     {
         private XML_Reader Reader { get; set; }
         private Question currentQuestion { get; set; }
+        private float dynamicContentImageHeightSave;
         public Form1(XML_Reader reader)
         {
             InitializeComponent();
             Thread.Sleep(100);
             Reader = reader;
-            pictureBox.Visible = false;
-            labelAnswer1.Location = new Point(labelAnswer1.Location.X, 86);
-            labelAnswer2.Location = new Point(labelAnswer2.Location.X, 86 + 37);
-            labelAnswer3.Location = new Point(labelAnswer3.Location.X, 86 + 37*2);
-            labelAnswer4.Location = new Point(labelAnswer4.Location.X, 86 + 37*3);
             LoadQuestion();
+            dynamicContentImageHeightSave = tableLayoutPanelDynamicContent.RowStyles[1].Height;
         }
 
         public void LoadQuestion()
@@ -38,6 +35,7 @@ namespace Source_Projet_IA
             currentQuestion = Reader.GetQuestion(val);
             labelQuestion.Text = currentQuestion.Title;
             labelQuestion.Left = (this.ClientSize.Width / 2) - (labelQuestion.Width / 2);
+            //Console.WriteLine("label height before : "+);
             labelAnswer1.Text = currentQuestion.LAnswers[0];
             Console.WriteLine("session de answer 1 :"+ currentQuestion.LAnswers[0]);
             labelAnswer1.Left = (this.ClientSize.Width / 2) - (labelAnswer1.Width / 2);
@@ -50,31 +48,15 @@ namespace Source_Projet_IA
 
             if (currentQuestion.ImgURL == "")
             {
-                pictureBox.Visible = false;
-                int currpos = 85;
-                labelAnswer1.Location = new Point(labelAnswer1.Location.X, currpos);
-                currpos += 20;
-                labelAnswer2.Location = new Point(labelAnswer1.Location.X, currpos);
-                currpos += 20;
-                labelAnswer3.Location = new Point(labelAnswer1.Location.X, currpos);
-                currpos += 20;
-                labelAnswer4.Location = new Point(labelAnswer1.Location.X, currpos);
+                tableLayoutPanelDynamicContent.RowCount = tableLayoutPanelDynamicContent.RowCount - 1;
+                tableLayoutPanelDynamicContent.RowStyles.RemoveAt(1);
             }
             else
             {
-                pictureBox.Visible = true;
+                tableLayoutPanelDynamicContent.RowCount = tableLayoutPanelDynamicContent.RowCount + 1;
+                tableLayoutPanelDynamicContent.RowStyles.Add(
+        new RowStyle(System.Windows.Forms.SizeType.Absolute, dynamicContentImageHeightSave));
                 pictureBox.Image = Image.FromFile(currentQuestion.ImgURL);
-                pictureBox.Location = new Point(pictureBox.Location.X, pictureBox.Location.Y + labelQuestion.Height);
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                int currpos = 275;
-                labelAnswer1.Location = new Point(labelAnswer1.Location.X, currpos);
-                currpos += 20;
-                labelAnswer2.Location = new Point(labelAnswer1.Location.X, currpos);
-                currpos += 20;
-                labelAnswer3.Location = new Point(labelAnswer1.Location.X, currpos);
-                currpos += 20;
-                labelAnswer4.Location = new Point(labelAnswer1.Location.X, currpos);
-
             }
         }
 

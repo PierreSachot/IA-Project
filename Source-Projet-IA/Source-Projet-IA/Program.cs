@@ -27,7 +27,7 @@ namespace Source_Projet_IA
             Console.WriteLine("b- " + q.LAnswers[1]);
             Console.WriteLine("c- " + q.LAnswers[2]);
             Console.WriteLine("d- " + q.LAnswers[3]);
-            Application.Run(new Form1(reader));
+            Application.Run(new Questionnaire(reader));
         }
     }
 }
