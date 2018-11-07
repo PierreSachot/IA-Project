@@ -1,26 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <questions>
 	<question>
-		<title>L’algorithme MinMax est :</title>
-		<img></img>
+		<title>Qu'est-ce qu'un Lidar?</title>
+		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
-		<answer>Utilisé en I.A. pour jouer à deux contre un adversaire.</answer>
-		<answer>Utilisé en I.A. pour trouver le plus court chemin dans un graphe.</answer>
-		<answer>Utilisé en reconnaissance des formes pour détecter un isomorphisme de graphe</answer>
-		<answer>Utilisé pour la détection de contours en vision par ordinateur</answer>
+		<answer>Un appareil permettant de calculer la distance à laquelle se trouvent des obstacles par l'émission et la réception de faisceaux laser</answer>
+		<answer>Un système de localisation par satellite</answer>
+		<answer>Un appareil de détection, qui émet des ondes radioélectriques et en reçoit l'écho, permettant ainsi de déterminer la position d'un objet</answer>
+		<answer>Une puce de géolocalisation radio équipée d’une antenne</answer>
 	</question>
 	<question>
-		<title><![CDATA[Soit M une matrice d’adjacence de taille NxN remplie avec des « a », des « b » ou éventuellement avec des « 0 » en cas d’absence de relation. 
-		On considère le code ci-dessous :int cpt = 0 ;
-		for (int i=0 ; i<n ; i++)
-			for (int j=0 ; j<n ; j++)
-				X
-		
-		Par quoi faut-il remplacer X pour compter le nombre de relations non symétriques du graphe ?]]></title>
-		<img>./singe.jpg</img>
+		<title>De quoi est composé un microcontrôleur?</title>
+		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
-		<answer><![CDATA[if ((M[i,j] == "a") || (M[i,j]== "b")) cpt++ ;]]></answer>
-		<answer><![CDATA[if ((M[i,j] != "0") && (M[j,i] != M[i,j])) cpt++ ;]]></answer>
-		<answer><![CDATA[Ni a, ni b, il faut d’abord modifier les lignes précédentes.]]></answer>
+		<answer>Servo-contrôleur + processeur + mémoire</answer>
+		<answer>Servo-contrôleur + microprocesseur + capteur</answer>
+		<answer>Servo-contrôleur + microprocesseur + mémoire</answer>
+		<answer>Moteur + processeur + capteur</answer>
+	</question>
+	<question>
+		<title>Qu'est-ce qu'une information proprioceptive?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>1</correctAnswer>
+		<answer>Une information provenant de la perception de l'environnement par des capteurs</answer>
+		<answer>Une information interne au robot, indépendante de l'environnement</answer>
+		<answer>Une information donnée aux capteurs sur l’environnement extérieur</answer>
+		<answer>Une information sur la géolocalisation du robot</answer>
+	</question>
+	<question>
+		<title>Sous quel acronyme désigne-t-on l’ensemble des techniques permettant de construire une carte de l’environnement de manière incrémentale?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>2</correctAnswer>
+		<answer>EAASL (Environment Analysis And Self Localization)</answer>
+		<answer>RASP (Representation And Self Positioning)</answer>
+		<answer>SLAM (Self Localization And Mapping)</answer>
+		<answer>MAEA (Mapping And Environment Analysis)</answer>
+	</question>
+	<question>
+		<title>Comment appelle-t-on les éléments grâce auxquels un robot peut se repérer afin de naviguer par guidage?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>3</correctAnswer>
+		<answer>Amarres</answer>
+		<answer>Amères</answer>
+		<answer>Amars</answer>
+		<answer>Amers</answer>
+	</question>
+	<question>
+		<title>Qu'est-ce qu'une information extéroceptive?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>0</correctAnswer>
+		<answer>Une information provenant de la perception de l’environnement par des capteurs</answer>
+		<answer>Une information provenant du robot à destination de l’environnement extérieur</answer>
+		<answer>Une information sur la géolocalisation du robot</answer>
+		<answer>Une information interne au robot, indépendante de l’environnement</answer>
+	</question>
+	<question>
+		<title>Donnez la définition standard de l'Intelligence artificielle:</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>1</correctAnswer>
+		<answer>Programme informatique capable de reproduire des aptitudes à la réflexion et à l’interaction intelligente, mais également avoir une conscience, des émotions et comprendre ses propres raisonnements</answer>
+		<answer>Ensemble des techniques et algorithmes permettant de résoudre des problèmes à l’aide d’un ordinateur</answer>
+		<answer>Suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre un problème ou d'obtenir un résultat</answer>
+		<answer>Système informatique doué de conscience</answer>
+	</question>
+	<question>
+		<title>Déterminez quel graphe parmi ceux proposés représente un réseau Bayésien:</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>2</correctAnswer>
+		<img>./Images/Question_Images.PNG</img>
+		<answer>Image 1</answer>
+		<answer>Image 2</answer>
+		<answer>Image 3</answer>
+		<answer>Image 4</answer>
+	</question>
+	<question>
+		<title>Une matrice d'adjacence représentant un graphe pondéré orienté à n états est:</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>1</correctAnswer>
+		<answer>Une matrice symétrique de taille n*n de trace nulle</answer>
+		<answer>Une matrice asymétrique de taille n*n</answer>
+		<answer>Une matrice carrée de trace non-nulle de taille n*n</answer>
+		<answer>Une matrice carrée triangulaire inférieure de taille n*n</answer>
+	</question>
+	<question>
+		<title>Quelle est la différence principale entre les algorithmes MinMax et Alpha-Beta?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>3</correctAnswer>
+		<answer>L’algorithme MinMax est en général plus performant</answer>
+		<answer>Leur code diffère l’un de l’autre de deux boucles for imbriquées</answer>
+		<answer>L’utilisation de la récursivité</answer>
+		<answer>L’algorithme Alpha-Beta évite de développement de branches inutiles</answer>
+	</question>
+	<question>
+		<title><![CDATA[On considère le code ci-dessous. Par quoi faut-il remplacer X1 et X2 pour obtenir la fonction Alpha-beta ?
+		On considère le code ci-dessous :
+		function alphabeta(node, depth, alpha, beta, maximizingPlayer) is
+			if depth = 0 or  node is a terminal node then
+				return the heuristic value of node
+			if maximizingPlayer then
+				value := -inf
+				for each child of node do
+					value := max(value, alphabeta(child, depth - 1, alpha, beta, FALSE))
+					alpha := max(alpha, value)
+					X1
+				return value
+			else
+				value := +inf
+				for each child of node do
+					value := min(value, alphabeta(child, depth - 1, alpha, beta, TRUE))
+					beta := min(beta, value)
+					X2
+				return value
+		end]]></title>
+		<numberPoints>2</numberPoints>
+		<correctAnswer>0</correctAnswer>
+		
+		<answer>X1 : if (alpha &gt;= beta) then break et X2 : if (alpha &gt;= beta) then break</answer>
+		<answer>X1 : if (alpha &gt;= beta) then break et X2 : if (alpha &lt;= beta) then break</answer>
+		<answer>X1 : if (alpha &gt;= beta) then break et X2 : if (beta &gt;= alpha) then break</answer>
+		<answer>X1 : if (alpha &lt;= beta) then break et X2 : if (alpha &lt;= beta) then break</answer>
+	</question>
+	<question>
+		<title>Parmi les assertions suivantes, laquelle est juste?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>2</correctAnswer>
+		<answer>Pour un graphe orienté auquel on associe une valeur à chaque relation, on dit qu’il s’agit d’un graphe “valué” et on appelle les transitions des “arêtes”</answer>
+		<answer>Pour un graphe non-orienté auquel on n’associe aucune valeur à chaque relation, on dit qu’il s’agit d’un graphe “non-valué” et on appelle les transitions des “arcs”</answer>
+		<answer>Pour un graphe orienté auquel on associe une valeur à chaque relation, on dit qu’il s’agit d’un graphe “valué” et on appelle les transitions des “arcs”</answer>
+		<answer>Pour un graphe non-orienté auquel on associe une valeur à chaque relation, on dit qu’il s’agit d’un graphe “valué” et on appelle les transitions des “arcs”</answer>
+	</question>
+	<question>
+		<title>À quel type de parcours et de stratégie cet arbre de recherche correspond-t-il?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>0</correctAnswer>
+		<img>./Images/ArbreFIFO</img>
+		<answer>Parcours en largeur d’abord - Stratégie First In First Out (FIFO)</answer>
+		<answer>Parcours en profondeur d’abord - Stratégie First In First Out (FIFO)</answer>
+		<answer>Parcours en largeur d’abord - Stratégie Last In First Out (LIFO)</answer>
+		<answer>Parcours en profondeur d’abord - Stratégie Last In First Out (LIFO)</answer>
+	</question>
+	<question>
+		<title>Quelles sont, dans l’ordre, les 3 opérations majeures “imitées” par un algorithme génétique?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>3</correctAnswer>
+		<answer>Dérivation - Sélection - Linéarisation</answer>
+		<answer>Croisement - Dérivation - Mutation</answer>
+		<answer>Mutation - Linéarisation - Croisement</answer>
+		<answer>Sélection - Croisement - Mutation</answer>
+	</question>
+	<question>
+		<title>En quoi consiste le processus de Croisement dans un algorithme génétique?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>1</correctAnswer>
+		<answer>On sélectionne les individus qui obtiennent les meilleurs résultats. Ils gagnent la compétition de reproduction</answer>
+		<answer>On choisit 2 individus différents parmis les meilleurs et on compose un vecteur mutant en prenant certaines valeurs de l’un et certaines valeurs de l’autre</answer>
+		<answer>On choisit un individu sélectionné et on modifie ses propriétés de façon aléatoire compris dans un petit intervalle défini</answer>
+		<answer>On rajoute des individus de façon aléatoire jusqu’à obtenir un individu fonctionnel</answer>
+	</question>
+	<question>
+		<title>En quoi consiste le processus de Sélection dans un algorithme génétique?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>0</correctAnswer>
+		<answer>On sélectionne les individus qui obtiennent les meilleurs résultats. Ils gagnent la compétition de reproduction</answer>
+		<answer>On choisit 2 individus différents parmis les meilleurs et on compose un vecteur mutant en prenant certaines valeurs de l’un et certaines valeurs de l’autre</answer>
+		<answer>On choisit un individu sélectionné et on modifie ses propriétés de façon aléatoire compris dans un petit intervalle défini</answer>
+		<answer>On rajoute des individus de façon aléatoire jusqu’à obtenir un individu fonctionnel</answer>
+	</question>
+	<question>
+		<title>En quoi consiste le processus de Mutation dans un algorithme génétique?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>2</correctAnswer>
+		<answer>On sélectionne les individus qui obtiennent les meilleurs résultats. Ils gagnent la compétition de reproduction</answer>
+		<answer>On choisit 2 individus différents parmis les meilleurs et on compose un vecteur mutant en prenant certaines valeurs de l’un et certaines valeurs de l’autre</answer>
+		<answer>On choisit un individu sélectionné et on modifie ses propriétés de façon aléatoire compris dans un petit intervalle défini</answer>
+		<answer>On rajoute des individus de façon aléatoire jusqu’à obtenir un individu fonctionnel</answer>
+	</question>
+	<question>
+		<title>Quel est l’objectif de l’algorithme de Dijkstra?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>2</correctAnswer>
+		<answer>Créer une population nombreuse d’individus, puis sélectionner les meilleurs selon un critère d’évaluation donné et  de régénérer une population nombreuse en procédant à des mutations ou des croisements des meilleurs individus</answer>
+		<answer>Résoudre des problèmes d'optimisation en échantillonnant un modèle de distribution, dont les paramètres évoluent via des opérateurs de sélection</answer>
+		<answer>Trouver le plus court chemin entre un état initial et un état final, l’espace d’états étant défini par un graphe, avec un coût positif associé à chaque transition</answer>
+		<answer>Calculer des plus courts chemins entre tous les sommets dans un graphe où les poids peuvent être négatifs</answer>
+	</question>
+	<question>
+		<title>Soit h(N) l'heuristique d'un algorithme A*. Quelle est l'expression du coût heuristique f(N)?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>3</correctAnswer>
+		<answer>f(N) = coût_chemin(N) - h(N)</answer>
+		<answer>f(N) = coût_chemin(N) * h(N)</answer>
+		<answer>f(N) = coût_chemin(N) / h(N)</answer>
+		<answer>f(N) = coût_chemin(N) + h(N)</answer>
+	</question>
+	<question>
+		<title>Quelle est la principale différence entre l’algorithme A* et celui de Dijkstra?</title>
+		<numberPoints>1</numberPoints>
+		<correctAnswer>0</correctAnswer>
+		<answer>L’algorithme A* est strictement équivalent à Dijkstra, sauf pour la stratégie de classement des noeuds placés dans les Ouverts: on ajoute une heuristique h(N) pour estimer le coût du chemin restant pour atteindre le but</answer>
+		<answer>L’algorithme A* est strictement équivalent à Dijkstra, sauf qu’il procède à une exploration “radiale” non dirigée par le but</answer>
+		<answer>Contrairement à l’algorithme Dijkstra, l’algorithme A* ne prend pas en compte le contexte ou les informations de haut-niveau pour décomposer le problème en sous-problèmes</answer>
+		<answer>Contrairement à l’algorithme Dijkstra, l’algorithme A* a tendance à provoquer une augmentation importante de l’arbre d’exploration</answer>
 	</question>
 </questions>
