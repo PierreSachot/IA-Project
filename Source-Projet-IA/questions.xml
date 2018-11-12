@@ -4,6 +4,7 @@
 		<title>Qu'est-ce qu'un Lidar?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
+		<img></img>
 		<answer>Un appareil permettant de calculer la distance à laquelle se trouvent des obstacles par l'émission et la réception de faisceaux laser</answer>
 		<answer>Un système de localisation par satellite</answer>
 		<answer>Un appareil de détection, qui émet des ondes radioélectriques et en reçoit l'écho, permettant ainsi de déterminer la position d'un objet</answer>
@@ -13,6 +14,7 @@
 		<title>De quoi est composé un microcontrôleur?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
+		<img></img>
 		<answer>Servo-contrôleur + processeur + mémoire</answer>
 		<answer>Servo-contrôleur + microprocesseur + capteur</answer>
 		<answer>Servo-contrôleur + microprocesseur + mémoire</answer>
@@ -22,6 +24,7 @@
 		<title>Qu'est-ce qu'une information proprioceptive?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>1</correctAnswer>
+		<img></img>
 		<answer>Une information provenant de la perception de l'environnement par des capteurs</answer>
 		<answer>Une information interne au robot, indépendante de l'environnement</answer>
 		<answer>Une information donnée aux capteurs sur l’environnement extérieur</answer>
@@ -31,6 +34,7 @@
 		<title>Sous quel acronyme désigne-t-on l’ensemble des techniques permettant de construire une carte de l’environnement de manière incrémentale?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
+		<img></img>
 		<answer>EAASL (Environment Analysis And Self Localization)</answer>
 		<answer>RASP (Representation And Self Positioning)</answer>
 		<answer>SLAM (Self Localization And Mapping)</answer>
@@ -40,6 +44,7 @@
 		<title>Comment appelle-t-on les éléments grâce auxquels un robot peut se repérer afin de naviguer par guidage?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>3</correctAnswer>
+		<img></img>
 		<answer>Amarres</answer>
 		<answer>Amères</answer>
 		<answer>Amars</answer>
@@ -49,6 +54,7 @@
 		<title>Qu'est-ce qu'une information extéroceptive?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
+		<img></img>
 		<answer>Une information provenant de la perception de l’environnement par des capteurs</answer>
 		<answer>Une information provenant du robot à destination de l’environnement extérieur</answer>
 		<answer>Une information sur la géolocalisation du robot</answer>
@@ -58,6 +64,7 @@
 		<title>Donnez la définition standard de l'Intelligence artificielle:</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>1</correctAnswer>
+		<img></img>
 		<answer>Programme informatique capable de reproduire des aptitudes à la réflexion et à l’interaction intelligente, mais également avoir une conscience, des émotions et comprendre ses propres raisonnements</answer>
 		<answer>Ensemble des techniques et algorithmes permettant de résoudre des problèmes à l’aide d’un ordinateur</answer>
 		<answer>Suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre un problème ou d'obtenir un résultat</answer>
@@ -77,6 +84,7 @@
 		<title>Une matrice d'adjacence représentant un graphe pondéré orienté à n états est:</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>1</correctAnswer>
+		<img></img>
 		<answer>Une matrice symétrique de taille n*n de trace nulle</answer>
 		<answer>Une matrice asymétrique de taille n*n</answer>
 		<answer>Une matrice carrée de trace non-nulle de taille n*n</answer>
@@ -86,6 +94,7 @@
 		<title>Quelle est la différence principale entre les algorithmes MinMax et Alpha-Beta?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>3</correctAnswer>
+		<img></img>
 		<answer>L’algorithme MinMax est en général plus performant</answer>
 		<answer>Leur code diffère l’un de l’autre de deux boucles for imbriquées</answer>
 		<answer>L’utilisation de la récursivité</answer>
@@ -114,7 +123,7 @@
 		end]]></title>
 		<numberPoints>2</numberPoints>
 		<correctAnswer>0</correctAnswer>
-		
+		<img></img>		
 		<answer>X1 : if (alpha &gt;= beta) then break et X2 : if (alpha &gt;= beta) then break</answer>
 		<answer>X1 : if (alpha &gt;= beta) then break et X2 : if (alpha &lt;= beta) then break</answer>
 		<answer>X1 : if (alpha &gt;= beta) then break et X2 : if (beta &gt;= alpha) then break</answer>
@@ -124,6 +133,7 @@
 		<title>Parmi les assertions suivantes, laquelle est juste?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
+		<img></img>
 		<answer>Pour un graphe orienté auquel on associe une valeur à chaque relation, on dit qu’il s’agit d’un graphe “valué” et on appelle les transitions des “arêtes”</answer>
 		<answer>Pour un graphe non-orienté auquel on n’associe aucune valeur à chaque relation, on dit qu’il s’agit d’un graphe “non-valué” et on appelle les transitions des “arcs”</answer>
 		<answer>Pour un graphe orienté auquel on associe une valeur à chaque relation, on dit qu’il s’agit d’un graphe “valué” et on appelle les transitions des “arcs”</answer>
@@ -143,6 +153,7 @@
 		<title>Quelles sont, dans l’ordre, les 3 opérations majeures “imitées” par un algorithme génétique?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>3</correctAnswer>
+		<img></img>
 		<answer>Dérivation - Sélection - Linéarisation</answer>
 		<answer>Croisement - Dérivation - Mutation</answer>
 		<answer>Mutation - Linéarisation - Croisement</answer>
@@ -152,6 +163,7 @@
 		<title>En quoi consiste le processus de Croisement dans un algorithme génétique?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>1</correctAnswer>
+		<img></img>
 		<answer>On sélectionne les individus qui obtiennent les meilleurs résultats. Ils gagnent la compétition de reproduction</answer>
 		<answer>On choisit 2 individus différents parmis les meilleurs et on compose un vecteur mutant en prenant certaines valeurs de l’un et certaines valeurs de l’autre</answer>
 		<answer>On choisit un individu sélectionné et on modifie ses propriétés de façon aléatoire compris dans un petit intervalle défini</answer>
@@ -161,6 +173,7 @@
 		<title>En quoi consiste le processus de Sélection dans un algorithme génétique?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
+		<img></img>
 		<answer>On sélectionne les individus qui obtiennent les meilleurs résultats. Ils gagnent la compétition de reproduction</answer>
 		<answer>On choisit 2 individus différents parmis les meilleurs et on compose un vecteur mutant en prenant certaines valeurs de l’un et certaines valeurs de l’autre</answer>
 		<answer>On choisit un individu sélectionné et on modifie ses propriétés de façon aléatoire compris dans un petit intervalle défini</answer>
@@ -170,6 +183,7 @@
 		<title>En quoi consiste le processus de Mutation dans un algorithme génétique?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
+		<img></img>
 		<answer>On sélectionne les individus qui obtiennent les meilleurs résultats. Ils gagnent la compétition de reproduction</answer>
 		<answer>On choisit 2 individus différents parmis les meilleurs et on compose un vecteur mutant en prenant certaines valeurs de l’un et certaines valeurs de l’autre</answer>
 		<answer>On choisit un individu sélectionné et on modifie ses propriétés de façon aléatoire compris dans un petit intervalle défini</answer>
@@ -179,6 +193,7 @@
 		<title>Quel est l’objectif de l’algorithme de Dijkstra?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
+		<img></img>
 		<answer>Créer une population nombreuse d’individus, puis sélectionner les meilleurs selon un critère d’évaluation donné et  de régénérer une population nombreuse en procédant à des mutations ou des croisements des meilleurs individus</answer>
 		<answer>Résoudre des problèmes d'optimisation en échantillonnant un modèle de distribution, dont les paramètres évoluent via des opérateurs de sélection</answer>
 		<answer>Trouver le plus court chemin entre un état initial et un état final, l’espace d’états étant défini par un graphe, avec un coût positif associé à chaque transition</answer>
@@ -188,6 +203,7 @@
 		<title>Soit h(N) l'heuristique d'un algorithme A*. Quelle est l'expression du coût heuristique f(N)?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>3</correctAnswer>
+		<img></img>
 		<answer>f(N) = coût_chemin(N) - h(N)</answer>
 		<answer>f(N) = coût_chemin(N) * h(N)</answer>
 		<answer>f(N) = coût_chemin(N) / h(N)</answer>
@@ -197,6 +213,7 @@
 		<title>Quelle est la principale différence entre l’algorithme A* et celui de Dijkstra?</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
+		<img></img>
 		<answer>L’algorithme A* est strictement équivalent à Dijkstra, sauf pour la stratégie de classement des noeuds placés dans les Ouverts: on ajoute une heuristique h(N) pour estimer le coût du chemin restant pour atteindre le but</answer>
 		<answer>L’algorithme A* est strictement équivalent à Dijkstra, sauf qu’il procède à une exploration “radiale” non dirigée par le but</answer>
 		<answer>Contrairement à l’algorithme Dijkstra, l’algorithme A* ne prend pas en compte le contexte ou les informations de haut-niveau pour décomposer le problème en sous-problèmes</answer>

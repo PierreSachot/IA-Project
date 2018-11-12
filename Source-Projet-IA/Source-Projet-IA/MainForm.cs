@@ -17,14 +17,13 @@ namespace Source_Projet_IA
         Questionnaire questionnaire;
         public MainForm()
         {
-            XML_Reader reader = new XML_Reader();
-            questionnaire = new Questionnaire(reader, this);
             InitializeComponent();
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             this.Hide();
+            questionnaire = new Questionnaire(this);
             questionnaire.Show();
         }
     }
