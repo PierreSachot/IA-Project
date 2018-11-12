@@ -23,9 +23,9 @@ namespace DAL
             List<String> lAnswers = new List<string>();
 
             string question = XmlFile.DocumentElement.ChildNodes[index].ChildNodes[0]?.InnerText;
-            string imgURL = XmlFile.DocumentElement.ChildNodes[index].ChildNodes[1]?.InnerText;
-            int nbPoints = int.Parse(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[2]?.InnerText);
-            int correctAnswer = int.Parse(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[3]?.InnerText);
+            int nbPoints = int.Parse(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[1]?.InnerText);
+            int correctAnswer = int.Parse(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[2]?.InnerText);
+            string imgURL = XmlFile.DocumentElement.ChildNodes[index].ChildNodes[3]?.InnerText;
             lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[4]?.InnerText);
             lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[5]?.InnerText);
             lAnswers.Add(XmlFile.DocumentElement.ChildNodes[index].ChildNodes[6]?.InnerText);

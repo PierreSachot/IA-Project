@@ -21,6 +21,7 @@ namespace Source_Projet_IA
 
         public Questionnaire(Form form)
         {
+            Thread.Sleep(500);
             MainForm = form;
             CurrentController = new Controller();
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace Source_Projet_IA
                 ResizeComponents();
                 if (CurrentController.CurrentQuestion.ImgURL == "")
                 {
-                    groupBoxReponses.Anchor = System.Windows.Forms.AnchorStyles.Top;
+                    //groupBoxReponses.Anchor = System.Windows.Forms.AnchorStyles.Top;
                     pictureBox.Hide();
                 }
                 else
@@ -49,7 +50,7 @@ namespace Source_Projet_IA
                     pictureBox.Image = Image.FromFile(CurrentController.CurrentQuestion.ImgURL);
                     pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                     pictureBox.Show();
-                    groupBoxReponses.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+                    //groupBoxReponses.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
                 }
             }
             catch(Exception e)

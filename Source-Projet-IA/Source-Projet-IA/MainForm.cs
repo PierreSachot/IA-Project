@@ -17,13 +17,13 @@ namespace Source_Projet_IA
         Questionnaire questionnaire;
         public MainForm()
         {
-            questionnaire = new Questionnaire(this);
             InitializeComponent();
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             this.Hide();
+            questionnaire = new Questionnaire(this);
             questionnaire.Show();
         }
     }
