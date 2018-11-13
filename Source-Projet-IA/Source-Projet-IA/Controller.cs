@@ -6,30 +6,34 @@ using System.Threading.Tasks;
 using DAL;
 using Domain;
 
-namespace IA_DAL
+namespace Source_Projet_IA
 {
     public class Controller
     {
-        private static int NB_QUESTIONS = 20;
+        public static readonly int NB_QUESTIONS = 20;
         private XML_Reader Reader { get; set; }
         public int Score { get; private set; }
+        public int ScoreTotal { get; private set; }
         public List<int> QuestionsTraitees { get; set; }
         public Question CurrentQuestion { get; private set; }
 
-        public Controller(int score)
+        public Questionnaire QuestionnaireForm { get; private set; }
+
+
+        public Controller(Questionnaire questionnaire)
         {
+            QuestionnaireForm = questionnaire;
             Reader = new XML_Reader(); ;
-            Score = score;
+            Score = 0;
+            ScoreTotal = 0;
             QuestionsTraitees = new List<int>();
         }
-
-        public Controller() : this(0) { }
 
         public void LoadNextQuestion()
         {
             if(QuestionsTraitees.Count() >= NB_QUESTIONS)
             {
-
+                QuestionnaireForm.OpenScoreBox(Score, ScoreTotal);
             }
             else
             {
@@ -54,6 +58,7 @@ namespace IA_DAL
         {
             if (CurrentQuestion.CorrectAnswer == index)
                 Score += CurrentQuestion.NbPoints;
+            ScoreTotal += CurrentQuestion.NbPoints;
         }
     }
 }

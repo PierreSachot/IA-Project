@@ -58,7 +58,7 @@
             this.panelQuestion.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelQuestion.Location = new System.Drawing.Point(0, 0);
             this.panelQuestion.Name = "panelQuestion";
-            this.panelQuestion.Size = new System.Drawing.Size(1062, 53);
+            this.panelQuestion.Size = new System.Drawing.Size(1062, 57);
             this.panelQuestion.TabIndex = 0;
             // 
             // labelQuestions
@@ -75,10 +75,10 @@
             // 
             this.dynamicQuestionLabel.AutoSize = true;
             this.dynamicQuestionLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dynamicQuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dynamicQuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dynamicQuestionLabel.Location = new System.Drawing.Point(0, 33);
             this.dynamicQuestionLabel.Name = "dynamicQuestionLabel";
-            this.dynamicQuestionLabel.Size = new System.Drawing.Size(143, 20);
+            this.dynamicQuestionLabel.Size = new System.Drawing.Size(160, 24);
             this.dynamicQuestionLabel.TabIndex = 1;
             this.dynamicQuestionLabel.Text = "Dynamic question";
             // 
@@ -99,9 +99,9 @@
             this.panelAnswers.Controls.Add(this.groupBoxReponses);
             this.panelAnswers.Controls.Add(this.pictureBox);
             this.panelAnswers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAnswers.Location = new System.Drawing.Point(0, 53);
+            this.panelAnswers.Location = new System.Drawing.Point(0, 57);
             this.panelAnswers.Name = "panelAnswers";
-            this.panelAnswers.Size = new System.Drawing.Size(1062, 628);
+            this.panelAnswers.Size = new System.Drawing.Size(1062, 624);
             this.panelAnswers.TabIndex = 1;
             // 
             // groupBoxReponses
@@ -112,7 +112,7 @@
             this.groupBoxReponses.Controls.Add(this.linkLabel3);
             this.groupBoxReponses.Controls.Add(this.linkLabel2);
             this.groupBoxReponses.Controls.Add(this.linkLabel1);
-            this.groupBoxReponses.Location = new System.Drawing.Point(191, 417);
+            this.groupBoxReponses.Location = new System.Drawing.Point(191, 413);
             this.groupBoxReponses.Name = "groupBoxReponses";
             this.groupBoxReponses.Size = new System.Drawing.Size(702, 160);
             this.groupBoxReponses.TabIndex = 7;
@@ -125,9 +125,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(76, 88);
+            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel4.Location = new System.Drawing.Point(76, 124);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel4.Size = new System.Drawing.Size(84, 20);
             this.linkLabel4.TabIndex = 3;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Tag = 3;
@@ -140,9 +141,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(76, 68);
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.Location = new System.Drawing.Point(76, 95);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel3.Size = new System.Drawing.Size(84, 20);
             this.linkLabel3.TabIndex = 2;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Tag = 2;
@@ -155,9 +157,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(76, 49);
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(76, 63);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(84, 20);
             this.linkLabel2.TabIndex = 1;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Tag = 1;
@@ -170,9 +173,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(76, 30);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(84, 20);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Tag = 0;
@@ -215,13 +219,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1062, 681);
             this.Controls.Add(this.panelSubmit);
             this.Controls.Add(this.panelAnswers);
             this.Controls.Add(this.panelQuestion);
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Questionnaire";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Questionnaire";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Questionnaire_FormClosing);
             this.panelQuestion.ResumeLayout(false);
             this.panelQuestion.PerformLayout();

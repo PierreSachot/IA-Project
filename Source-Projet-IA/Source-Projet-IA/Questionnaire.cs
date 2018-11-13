@@ -10,20 +10,19 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Threading;
 using Domain;
-using IA_DAL;
 
 namespace Source_Projet_IA
 {
     public partial class Questionnaire : Form
     {
         private Controller CurrentController;
-        private Form MainForm;
+        private MainForm MainForm;
 
-        public Questionnaire(Form form)
+        public Questionnaire(MainForm form)
         {
             Thread.Sleep(500);
             MainForm = form;
-            CurrentController = new Controller();
+            CurrentController = new Controller(this);
             InitializeComponent();
             Thread.Sleep(100);
             LoadQuestion();
@@ -33,8 +32,8 @@ namespace Source_Projet_IA
             try
             {
                 CurrentController.LoadNextQuestion();
-                dynamicQuestionLabel.Text = CurrentController.CurrentQuestion.Title;
-                labelQuestions.Text = CurrentController.QuestionsTraitees.Count+"/20";
+                dynamicQuestionLabel.Text = CurrentController.CurrentQuestion.Title.Replace("\t", "    ");
+                labelQuestions.Text = CurrentController.QuestionsTraitees.Count+"/"+Controller.NB_QUESTIONS;
                 linkLabel1.Text = CurrentController.CurrentQuestion.LAnswers[0];
                 linkLabel2.Text = CurrentController.CurrentQuestion.LAnswers[1];
                 linkLabel3.Text = CurrentController.CurrentQuestion.LAnswers[2];
@@ -83,6 +82,18 @@ namespace Source_Projet_IA
         {
             MainForm.Show();
             this.Close();
+        }
+
+        public void OpenScoreBox(int score, int scoreTotal)
+        {
+            MessageBox.Show("Vous avez obtenu la note de "+score+"/"+scoreTotal+"" +
+                "soit "+(int)(((double)score /scoreTotal)*100)+"% de réponses correctes",
+                "Fin du questionnaire",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1);
+            MainForm.Show();
+            this.Hide();
         }
 
         private void Questionnaire_FormClosing(object sender, FormClosingEventArgs e)
