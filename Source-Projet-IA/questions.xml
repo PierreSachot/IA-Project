@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <questions>
 	<question>
-		<title>Qu'est-ce qu'un Lidar?</title>
+		<title>Qu'est-ce qu'un Lidar? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
-		<img></img>
 		<answer>Un appareil permettant de calculer la distance à laquelle se trouvent des obstacles par l'émission et la réception de faisceaux laser</answer>
 		<answer>Un système de localisation par satellite</answer>
 		<answer>Un appareil de détection, qui émet des ondes radioélectriques et en reçoit l'écho, permettant ainsi de déterminer la position d'un objet</answer>
 		<answer>Une puce de géolocalisation radio équipée d’une antenne</answer>
 	</question>
 	<question>
-		<title>De quoi est composé un microcontrôleur?</title>
+		<title>De quoi est composé un microcontrôleur? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
-		<img></img>
 		<answer>Servo-contrôleur + processeur + mémoire</answer>
 		<answer>Servo-contrôleur + microprocesseur + capteur</answer>
 		<answer>Servo-contrôleur + microprocesseur + mémoire</answer>
 		<answer>Moteur + processeur + capteur</answer>
 	</question>
 	<question>
-		<title>Qu'est-ce qu'une information proprioceptive?</title>
+		<title>Qu'est-ce qu'une information proprioceptive? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>1</correctAnswer>
 		<img></img>
@@ -31,7 +29,7 @@
 		<answer>Une information sur la géolocalisation du robot</answer>
 	</question>
 	<question>
-		<title>Sous quel acronyme désigne-t-on l’ensemble des techniques permettant de construire une carte de l’environnement de manière incrémentale?</title>
+		<title>Sous quel acronyme désigne-t-on l’ensemble des techniques permettant de construire une carte de l’environnement de manière incrémentale? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
 		<img></img>
@@ -41,37 +39,34 @@
 		<answer>MAEA (Mapping And Environment Analysis)</answer>
 	</question>
 	<question>
-		<title>Comment appelle-t-on les éléments grâce auxquels un robot peut se repérer afin de naviguer par guidage?</title>
+		<title>Comment appelle-t-on les éléments grâce auxquels un robot peut se repérer afin de naviguer par guidage? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>3</correctAnswer>
-		<img></img>
 		<answer>Amarres</answer>
 		<answer>Amères</answer>
 		<answer>Amars</answer>
 		<answer>Amers</answer>
 	</question>
 	<question>
-		<title>Qu'est-ce qu'une information extéroceptive?</title>
+		<title>Qu'est-ce qu'une information extéroceptive? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
-		<img></img>
 		<answer>Une information provenant de la perception de l’environnement par des capteurs</answer>
 		<answer>Une information provenant du robot à destination de l’environnement extérieur</answer>
 		<answer>Une information sur la géolocalisation du robot</answer>
 		<answer>Une information interne au robot, indépendante de l’environnement</answer>
 	</question>
 	<question>
-		<title>Donnez la définition standard de l'Intelligence artificielle:</title>
+		<title>Donnez la définition standard de l'Intelligence artificielle : (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>1</correctAnswer>
-		<img></img>
 		<answer>Programme informatique capable de reproduire des aptitudes à la réflexion et à l’interaction intelligente, mais également avoir une conscience, des émotions et comprendre ses propres raisonnements</answer>
 		<answer>Ensemble des techniques et algorithmes permettant de résoudre des problèmes à l’aide d’un ordinateur</answer>
 		<answer>Suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre un problème ou d'obtenir un résultat</answer>
 		<answer>Système informatique doué de conscience</answer>
 	</question>
 	<question>
-		<title>Déterminez quel graphe parmi ceux proposés représente un réseau Bayésien:</title>
+		<title>Déterminez quel graphe parmi ceux proposés représente un réseau Bayésien : (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
 		<img>./Images/Question_Images.PNG</img>
@@ -81,7 +76,7 @@
 		<answer>Image 4</answer>
 	</question>
 	<question>
-		<title>Une matrice d'adjacence représentant un graphe pondéré orienté à n états est:</title>
+		<title>Une matrice d'adjacence représentant un graphe pondéré orienté à n états est : (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>1</correctAnswer>
 		<img></img>
@@ -91,7 +86,7 @@
 		<answer>Une matrice carrée triangulaire inférieure de taille n*n</answer>
 	</question>
 	<question>
-		<title>Quelle est la différence principale entre les algorithmes MinMax et Alpha-Beta?</title>
+		<title>Quelle est la différence principale entre les algorithmes MinMax et Alpha-Beta? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>3</correctAnswer>
 		<img></img>
@@ -102,7 +97,7 @@
 	</question>
 	<question>
 		<title><![CDATA[On considère le code ci-dessous. Par quoi faut-il remplacer X1 et X2 pour obtenir la fonction Alpha-beta ?
-		On considère le code ci-dessous :
+		On considère le code ci-dessous : (2 pts)
 		function alphabeta(node, depth, alpha, beta, maximizingPlayer) is
 			if depth = 0 or  node is a terminal node then
 				return the heuristic value of node
@@ -130,7 +125,7 @@
 		<answer>X1 : if (alpha &lt;= beta) then break et X2 : if (alpha &lt;= beta) then break</answer>
 	</question>
 	<question>
-		<title>Parmi les assertions suivantes, laquelle est juste?</title>
+		<title>Parmi les assertions suivantes, laquelle est juste? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
 		<img></img>
@@ -140,7 +135,7 @@
 		<answer>Pour un graphe non-orienté auquel on associe une valeur à chaque relation, on dit qu’il s’agit d’un graphe “valué” et on appelle les transitions des “arcs”</answer>
 	</question>
 	<question>
-		<title>À quel type de parcours et de stratégie cet arbre de recherche correspond-t-il?</title>
+		<title>À quel type de parcours et de stratégie cet arbre de recherche correspond-t-il? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
 		<img>./Images/ArbreFIFO</img>
@@ -150,7 +145,7 @@
 		<answer>Parcours en profondeur d’abord - Stratégie Last In First Out (LIFO)</answer>
 	</question>
 	<question>
-		<title>Quelles sont, dans l’ordre, les 3 opérations majeures “imitées” par un algorithme génétique?</title>
+		<title>Quelles sont, dans l’ordre, les 3 opérations majeures “imitées” par un algorithme génétique? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>3</correctAnswer>
 		<img></img>
@@ -160,7 +155,7 @@
 		<answer>Sélection - Croisement - Mutation</answer>
 	</question>
 	<question>
-		<title>En quoi consiste le processus de Croisement dans un algorithme génétique?</title>
+		<title>En quoi consiste le processus de Croisement dans un algorithme génétique? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>1</correctAnswer>
 		<img></img>
@@ -170,7 +165,7 @@
 		<answer>On rajoute des individus de façon aléatoire jusqu’à obtenir un individu fonctionnel</answer>
 	</question>
 	<question>
-		<title>En quoi consiste le processus de Sélection dans un algorithme génétique?</title>
+		<title>En quoi consiste le processus de Sélection dans un algorithme génétique? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
 		<img></img>
@@ -180,7 +175,7 @@
 		<answer>On rajoute des individus de façon aléatoire jusqu’à obtenir un individu fonctionnel</answer>
 	</question>
 	<question>
-		<title>En quoi consiste le processus de Mutation dans un algorithme génétique?</title>
+		<title>En quoi consiste le processus de Mutation dans un algorithme génétique? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
 		<img></img>
@@ -190,7 +185,7 @@
 		<answer>On rajoute des individus de façon aléatoire jusqu’à obtenir un individu fonctionnel</answer>
 	</question>
 	<question>
-		<title>Quel est l’objectif de l’algorithme de Dijkstra?</title>
+		<title>Quel est l’objectif de l’algorithme de Dijkstra? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
 		<img></img>
@@ -200,7 +195,7 @@
 		<answer>Calculer des plus courts chemins entre tous les sommets dans un graphe où les poids peuvent être négatifs</answer>
 	</question>
 	<question>
-		<title>Soit h(N) l'heuristique d'un algorithme A*. Quelle est l'expression du coût heuristique f(N)?</title>
+		<title>Soit h(N) l'heuristique d'un algorithme A*. Quelle est l'expression du coût heuristique f(N)? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>3</correctAnswer>
 		<img></img>
@@ -210,7 +205,7 @@
 		<answer>f(N) = coût_chemin(N) + h(N)</answer>
 	</question>
 	<question>
-		<title>Quelle est la principale différence entre l’algorithme A* et celui de Dijkstra?</title>
+		<title>Quelle est la principale différence entre l’algorithme A* et celui de Dijkstra? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
 		<img></img>
@@ -218,5 +213,27 @@
 		<answer>L’algorithme A* est strictement équivalent à Dijkstra, sauf qu’il procède à une exploration “radiale” non dirigée par le but</answer>
 		<answer>Contrairement à l’algorithme Dijkstra, l’algorithme A* ne prend pas en compte le contexte ou les informations de haut-niveau pour décomposer le problème en sous-problèmes</answer>
 		<answer>Contrairement à l’algorithme Dijkstra, l’algorithme A* a tendance à provoquer une augmentation importante de l’arbre d’exploration</answer>
+	</question>
+	<question>
+		<title>En appliquant l’algorithme Dijkstra à ce graphe pour trouver le plus court chemin entre 0 et 4, quel est l’état de l’ensemble F (des Fermés) à la dernière étape? (2 pts)</title>
+		<numberPoints>2</numberPoints>
+		<correctAnswer>2</correctAnswer>
+		<img>./Images/Graphe_Q21</img>
+		<img></img>
+		<answer>F = {0,3,5,4}</answer>
+		<answer>F = {0,2,3,4}</answer>
+		<answer>F = {0,2,5,4}</answer>
+		<answer>F = {0,2,5,3,4}</answer>
+	</question>
+	<question>
+		<title>En appliquant l’algorithme Dijkstra à ce graphe pour trouver le plus court chemin entre 0 et 4, quel est, parmi ceux proposés, l’arbre final de recherche obtenu? (2 pts)</title>
+		<numberPoints>2</numberPoints>
+		<correctAnswer>0</correctAnswer>
+		<img>./Images/Graphe_Arbres_Q22</img>
+		<img></img>
+		<answer>Arbre 1</answer>
+		<answer>Arbre 2</answer>
+		<answer>Arbre 3</answer>
+		<answer>Arbre 4</answer>
 	</question>
 </questions>
