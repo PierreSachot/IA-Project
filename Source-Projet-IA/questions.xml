@@ -219,4 +219,24 @@
 		<answer>Contrairement à l’algorithme Dijkstra, l’algorithme A* ne prend pas en compte le contexte ou les informations de haut-niveau pour décomposer le problème en sous-problèmes</answer>
 		<answer>Contrairement à l’algorithme Dijkstra, l’algorithme A* a tendance à provoquer une augmentation importante de l’arbre d’exploration</answer>
 	</question>
+	<question>
+		<title>En appliquant l’algorithme Dijkstra à ce graphe pour trouver le plus court chemin entre 0 et 4, quel est l’état de l’ensemble F (des Fermés) à la dernière étape?</title>
+		<numberPoints>2</numberPoints>
+		<correctAnswer>2</correctAnswer>
+		<img></img>
+		<answer>F = {0,3,5,4}</answer>
+		<answer>F = {0,2,3,4}</answer>
+		<answer>F = {0,2,5,4}</answer>
+		<answer>F = {0,2,5,3,4}</answer>
+	</question>
+	<question>
+		<title>En appliquant l’algorithme Dijkstra à ce graphe pour trouver le plus court chemin entre 0 et 4, quel est, parmi ceux proposés, l’arbre final de recherche obtenu?</title>
+		<numberPoints>2</numberPoints>
+		<correctAnswer>0</correctAnswer>
+		<img></img>
+		<answer>Arbre 1</answer>
+		<answer>Arbre 2</answer>
+		<answer>Arbre 3</answer>
+		<answer>Arbre 4</answer>
+	</question>
 </questions>
