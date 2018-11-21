@@ -17,10 +17,10 @@ namespace Source_Projet_IA
         public List<int> QuestionsTraitees { get; set; }
         public Question CurrentQuestion { get; private set; }
 
-        public Questionnaire QuestionnaireForm { get; private set; }
+        public FormQuestionnaire QuestionnaireForm { get; private set; }
 
 
-        public Controller(Questionnaire questionnaire)
+        public Controller(FormQuestionnaire questionnaire)
         {
             QuestionnaireForm = questionnaire;
             Reader = new XML_Reader(); ;

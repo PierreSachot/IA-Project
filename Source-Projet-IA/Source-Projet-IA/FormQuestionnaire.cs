@@ -13,12 +13,12 @@ using Domain;
 
 namespace Source_Projet_IA
 {
-    public partial class Questionnaire : Form
+    public partial class FormQuestionnaire : Form
     {
         private Controller CurrentController;
         private MainForm MainForm;
 
-        public Questionnaire(MainForm form)
+        public FormQuestionnaire(MainForm form)
         {
             Thread.Sleep(500);
             MainForm = form;
@@ -80,6 +80,11 @@ namespace Source_Projet_IA
 
         private void buttonRecommencer_Click(object sender, EventArgs e)
         {
+            GoBackToParentForm();
+        }
+
+        public void GoBackToParentForm()
+        {
             MainForm.Show();
             this.Close();
         }
@@ -98,7 +103,7 @@ namespace Source_Projet_IA
 
         private void Questionnaire_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            GoBackToParentForm();
         }
     }
 }

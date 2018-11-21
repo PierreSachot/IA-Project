@@ -14,7 +14,9 @@ namespace Source_Projet_IA
 {
     public partial class MainForm : Form
     {
-        Questionnaire questionnaire;
+        FormQuestionnaire questionnaire;
+        FormDijkstra dijkstra;
+
         public MainForm()
         {
             InitializeComponent();
@@ -23,8 +25,15 @@ namespace Source_Projet_IA
         private void buttonStart_Click(object sender, EventArgs e)
         {
             this.Hide();
-            questionnaire = new Questionnaire(this);
+            questionnaire = new FormQuestionnaire(this);
             questionnaire.Show();
+        }
+
+        private void buttonStartDijkstra_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            dijkstra = new FormDijkstra(this);
+            dijkstra.Show();
         }
     }
 }

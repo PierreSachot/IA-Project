@@ -1,6 +1,6 @@
 ﻿namespace Source_Projet_IA
 {
-    partial class Questionnaire
+    partial class FormQuestionnaire
     {
         /// <summary>
         /// Required designer variable.
@@ -214,7 +214,7 @@
             this.buttonMainMenu.UseVisualStyleBackColor = true;
             this.buttonMainMenu.Click += new System.EventHandler(this.buttonRecommencer_Click);
             // 
-            // Questionnaire
+            // FormQuestionnaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,7 +226,7 @@
             this.Controls.Add(this.panelQuestion);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Questionnaire";
+            this.Name = "FormQuestionnaire";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Questionnaire";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

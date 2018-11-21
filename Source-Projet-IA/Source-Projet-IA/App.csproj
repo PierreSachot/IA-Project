@@ -46,11 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormDijkstra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormDijkstra.Designer.cs">
+      <DependentUpon>FormDijkstra.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -58,16 +58,17 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Node2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Questionnaire.cs">
+    <Compile Include="FormQuestionnaire.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Questionnaire.Designer.cs">
-      <DependentUpon>Questionnaire.cs</DependentUpon>
+    <Compile Include="FormQuestionnaire.Designer.cs">
+      <DependentUpon>FormQuestionnaire.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormDijkstra.resx">
+      <DependentUpon>FormDijkstra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -81,8 +82,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Questionnaire.resx">
-      <DependentUpon>Questionnaire.cs</DependentUpon>
+    <EmbeddedResource Include="FormQuestionnaire.resx">
+      <DependentUpon>FormQuestionnaire.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
