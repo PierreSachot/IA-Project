@@ -38,6 +38,8 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.treeView2 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
             // treeView1
@@ -94,12 +96,13 @@
             // 
             // buttonEndGame
             // 
-            this.buttonEndGame.Location = new System.Drawing.Point(273, 346);
+            this.buttonEndGame.Location = new System.Drawing.Point(494, 347);
             this.buttonEndGame.Name = "buttonEndGame";
             this.buttonEndGame.Size = new System.Drawing.Size(75, 23);
             this.buttonEndGame.TabIndex = 20;
             this.buttonEndGame.Text = "J\'ai fini !";
             this.buttonEndGame.UseVisualStyleBackColor = true;
+            this.buttonEndGame.Click += new System.EventHandler(this.buttonEndGame_Click);
             // 
             // buttonBack
             // 
@@ -128,11 +131,30 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Arbre à remplir :";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(403, 141);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Correction :";
+            // 
+            // treeView2
+            // 
+            this.treeView2.LabelEdit = true;
+            this.treeView2.Location = new System.Drawing.Point(400, 160);
+            this.treeView2.Name = "treeView2";
+            this.treeView2.Size = new System.Drawing.Size(152, 180);
+            this.treeView2.TabIndex = 24;
+            // 
             // FormArbre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 382);
+            this.ClientSize = new System.Drawing.Size(581, 382);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.treeView2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonBack);
@@ -161,5 +183,7 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TreeView treeView2;
     }
 }

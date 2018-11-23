@@ -45,6 +45,7 @@
             this.buttonEndGame = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,11 +202,19 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(716, 93);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(202, 212);
+            this.treeView1.TabIndex = 22;
+            // 
             // FormDijkstra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 446);
+            this.ClientSize = new System.Drawing.Size(930, 446);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonEndGame);
@@ -250,6 +259,7 @@
         private System.Windows.Forms.Button buttonEndGame;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 

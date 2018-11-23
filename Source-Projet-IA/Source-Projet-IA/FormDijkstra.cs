@@ -238,8 +238,9 @@ namespace Source_Projet_IA
                         "Fermés : " + GetFermés() +
                         "\nOuverts : " + GetOuverts());
             }
-            this.Hide();
-            new FormArbre(listBoxgraphe, g, N0, matrice).Show();
+            g.GetSearchTree(treeView1, true);
+            /*this.Hide();
+            new FormArbre(listBoxgraphe, g, N0, matrice).Show();*/
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
