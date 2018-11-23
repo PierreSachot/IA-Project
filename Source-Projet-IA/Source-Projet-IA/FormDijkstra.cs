@@ -31,7 +31,7 @@ namespace Source_Projet_IA
             parent = mainForm;
             InitializeComponent();
 
-            pictureBox1.Image = Image.FromFile("Images/");
+            pictureBox1.Image = Image.FromFile("Images/Partie2_Dijkstra.PNG");
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             try
             {
@@ -238,6 +238,8 @@ namespace Source_Projet_IA
                         "Fermés : " + GetFermés() +
                         "\nOuverts : " + GetOuverts());
             }
+            this.Hide();
+            new FormArbre(listBoxgraphe, g, N0, matrice).Show();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

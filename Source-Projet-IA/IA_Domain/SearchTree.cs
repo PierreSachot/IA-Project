@@ -189,28 +189,36 @@ namespace Domain
 
         // Si on veut afficher l'arbre de recherche, il suffit de passer un treeview en paramètres
         // Celui-ci est mis à jour avec les noeuds de la liste des fermés, on ne tient pas compte des ouverts
-        public void GetSearchTree( TreeView TV )
+        public void GetSearchTree( TreeView TV, bool HideContent )
         {
             if (L_Fermes == null) return;
             if (L_Fermes.Count == 0) return;
             
             // On suppose le TreeView préexistant
             TV.Nodes.Clear();
-
-            TreeNode TN = new TreeNode ( L_Fermes[0].ToString() );
+            TreeNode TN;
+            if (HideContent)
+                TN = new TreeNode("?");
+            else
+                 TN = new TreeNode(L_Fermes[0].ToString());
             TV.Nodes.Add(TN);
 
-            AjouteBranche ( L_Fermes[0], TN );
+            AjouteBranche ( L_Fermes[0], TN, HideContent );
         }
 
         // AjouteBranche est exclusivement appelée par GetSearchTree; les noeuds sont ajoutés de manière récursive
-        private void AjouteBranche( GenericNode GN, TreeNode TN)
+        private void AjouteBranche( GenericNode GN, TreeNode TN, bool HideContent)
         {
             foreach (GenericNode GNfils in GN.GetEnfants())
             {
-                TreeNode TNfils = new TreeNode(GNfils.ToString());
+                TreeNode TNfils;
+                if (HideContent)
+                     TNfils = new TreeNode("?");
+                else
+                    TNfils = new TreeNode(GNfils.ToString());
                 TN.Nodes.Add(TNfils);
-                if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils); 
+                if (GNfils.GetEnfants().Count > 0)
+                    AjouteBranche(GNfils, TNfils, HideContent); 
             }
         }
   
