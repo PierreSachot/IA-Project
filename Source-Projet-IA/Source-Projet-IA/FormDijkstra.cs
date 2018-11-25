@@ -185,7 +185,6 @@ namespace Source_Projet_IA
 
         private void buttonNextStep_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             if(N.EndState())
             {
                 textBoxFermes.Text = GetFermés() + "," + numfinal;
@@ -198,9 +197,6 @@ namespace Source_Projet_IA
                 LaunchFormArbre();
             }
             else if(g.L_Ouverts.Count != 0)
-=======
-            if (g.L_Ouverts.Count != 0 && N.EndState() == false)
->>>>>>> 0b3b291c0a964bcf772625754f59d9d7ab81ef8f
             {
                 g.CalculerEtapeSuivante(ref g.L_Ouverts, ref g.L_Fermes, ref N);
                 string correctFerme = GetFermés(), correctOuvert = GetOuverts();

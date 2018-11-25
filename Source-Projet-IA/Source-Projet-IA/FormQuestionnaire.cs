@@ -70,7 +70,7 @@ namespace Source_Projet_IA
             linkLabel4.Left = (this.groupBoxReponses.Width / 2) - (linkLabel4.Width / 2);
         }
 
-        // procédure appelée lors d'un clique sur une réponse.
+        // procédure appelée lors d'un clic sur une réponse.
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             int nb = ((int)((LinkLabel)sender).Tag);
