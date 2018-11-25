@@ -16,14 +16,22 @@ namespace Source_Projet_IA
         private int noeudInitial;
         private int noeudFinal;
         private SearchTree g;
+        private MainForm parent;
 
-        public FormArbre(ListBox precedentResult, SearchTree g, Node2 N0, double[,] matrice)
+        public FormArbre(MainForm parent, ListBox precedentResult, SearchTree g, Node2 N0, double[,] matrice)
         {
             InitializeComponent();
             noeudInitial = FormDijkstra.numinitial;
             noeudFinal = FormDijkstra.numfinal;
+            FormDijkstra.numfinal--;
             textBoxInitialNode.Text = noeudInitial+"";
-            textBoxFinalNode.Text = "" + (noeudFinal-1);
+            textBoxFinalNode.Text = "" + noeudFinal;
+            this.parent = parent;
+            foreach (var l in precedentResult.Items)
+            {
+                listBox1.Items.Add(l);
+            }
+            listBox1 = precedentResult;
             /*N0.numero = noeudInitial;
             List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
             Node2 N1 = N0;
@@ -45,6 +53,16 @@ namespace Source_Projet_IA
             g.GetSearchTree(treeView2, false);
             CompareTreeNodes(treeView2, treeView1);
             buttonEndGame.Enabled = false;
+            this.parent.IsSecondExDone = true;
+            if (parent.IsFirstExDone)
+            {
+                parent.Show();
+            }
+            else
+            {
+                new FormQuestionnaire(parent).Show();
+            }
+            this.Hide();
         }
 
         void CompareTreeNodes(TreeView tv1, TreeView tv2)
@@ -90,6 +108,5 @@ namespace Source_Projet_IA
                 CompareRecursiveTree(tn1.Nodes[i], tn2.Nodes[i]);
             }
         }
-
     }
 }

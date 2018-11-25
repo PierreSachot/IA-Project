@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonStartDijkstra = new System.Windows.Forms.Button();
             this.buttonStartQCM = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +48,15 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(597, 176);
             this.mainPanel.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(232, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Choisissez votre exercice :";
             // 
             // buttonStartDijkstra
             // 
@@ -89,15 +98,6 @@
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Menu principal";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(232, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Choisissez votre exercice :";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,7 +105,7 @@
             this.ClientSize = new System.Drawing.Size(597, 176);
             this.Controls.Add(this.mainPanel);
             this.Name = "MainForm";
-            this.Text = "QCM intelligence artificiel";
+            this.Text = "Examen Intelligence Artificielle";
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.ResumeLayout(false);

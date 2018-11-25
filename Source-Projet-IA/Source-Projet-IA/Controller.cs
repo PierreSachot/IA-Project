@@ -54,11 +54,12 @@ namespace Source_Projet_IA
             }
         }
 
-        public void SetResponse(int index)
+        public int SetResponse(int index)
         {
             if (CurrentQuestion.CorrectAnswer == index)
                 Score += CurrentQuestion.NbPoints;
             ScoreTotal += CurrentQuestion.NbPoints;
+            return CurrentQuestion.CorrectAnswer;
         }
     }
 }

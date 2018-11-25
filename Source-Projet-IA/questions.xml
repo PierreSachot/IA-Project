@@ -4,6 +4,7 @@
 		<title>Qu'est-ce qu'un Lidar? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
+		<img></img>
 		<answer>Un appareil permettant de calculer la distance à laquelle se trouvent des obstacles par l'émission et la réception de faisceaux laser</answer>
 		<answer>Un système de localisation par satellite</answer>
 		<answer>Un appareil de détection, qui émet des ondes radioélectriques et en reçoit l'écho, permettant ainsi de déterminer la position d'un objet</answer>
@@ -13,6 +14,7 @@
 		<title>De quoi est composé un microcontrôleur? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>2</correctAnswer>
+		<img></img>
 		<answer>Servo-contrôleur + processeur + mémoire</answer>
 		<answer>Servo-contrôleur + microprocesseur + capteur</answer>
 		<answer>Servo-contrôleur + microprocesseur + mémoire</answer>
@@ -42,6 +44,7 @@
 		<title>Comment appelle-t-on les éléments grâce auxquels un robot peut se repérer afin de naviguer par guidage? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>3</correctAnswer>
+		<img></img>
 		<answer>Amarres</answer>
 		<answer>Amères</answer>
 		<answer>Amars</answer>
@@ -51,6 +54,7 @@
 		<title>Qu'est-ce qu'une information extéroceptive? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
+		<img></img>
 		<answer>Une information provenant de la perception de l’environnement par des capteurs</answer>
 		<answer>Une information provenant du robot à destination de l’environnement extérieur</answer>
 		<answer>Une information sur la géolocalisation du robot</answer>
@@ -60,6 +64,7 @@
 		<title>Donnez la définition standard de l'Intelligence artificielle : (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>1</correctAnswer>
+		<img></img>
 		<answer>Programme informatique capable de reproduire des aptitudes à la réflexion et à l’interaction intelligente, mais également avoir une conscience, des émotions et comprendre ses propres raisonnements</answer>
 		<answer>Ensemble des techniques et algorithmes permettant de résoudre des problèmes à l’aide d’un ordinateur</answer>
 		<answer>Suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre un problème ou d'obtenir un résultat</answer>
@@ -138,7 +143,7 @@
 		<title>À quel type de parcours et de stratégie cet arbre de recherche correspond-t-il? (1 pt)</title>
 		<numberPoints>1</numberPoints>
 		<correctAnswer>0</correctAnswer>
-		<img>./Images/ArbreFIFO</img>
+		<img>./Images/ArbreFIFO.PNG</img>
 		<answer>Parcours en largeur d’abord - Stratégie First In First Out (FIFO)</answer>
 		<answer>Parcours en profondeur d’abord - Stratégie First In First Out (FIFO)</answer>
 		<answer>Parcours en largeur d’abord - Stratégie Last In First Out (LIFO)</answer>
@@ -218,8 +223,7 @@
 		<title>En appliquant l’algorithme Dijkstra à ce graphe pour trouver le plus court chemin entre 0 et 4, quel est l’état de l’ensemble F (des Fermés) à la dernière étape? (2 pts)</title>
 		<numberPoints>2</numberPoints>
 		<correctAnswer>2</correctAnswer>
-		<img>./Images/Graphe_Q21</img>
-		<img></img>
+		<img>./Images/Graphe_Q21.PNG</img>
 		<answer>F = {0,3,5,4}</answer>
 		<answer>F = {0,2,3,4}</answer>
 		<answer>F = {0,2,5,4}</answer>
@@ -229,8 +233,7 @@
 		<title>En appliquant l’algorithme Dijkstra à ce graphe pour trouver le plus court chemin entre 0 et 4, quel est, parmi ceux proposés, l’arbre final de recherche obtenu? (2 pts)</title>
 		<numberPoints>2</numberPoints>
 		<correctAnswer>0</correctAnswer>
-		<img>./Images/Graphe_Arbres_Q22</img>
-		<img></img>
+		<img>./Images/Graphe_Arbres_Q22.PNG</img>
 		<answer>Arbre 1</answer>
 		<answer>Arbre 2</answer>
 		<answer>Arbre 3</answer>

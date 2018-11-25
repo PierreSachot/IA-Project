@@ -112,7 +112,7 @@ namespace Source_Projet_IA
                 // Fermeture du StreamReader (obligatoire) 
                 monStreamReader.Close();
                 numinitial = Convert.ToInt32(textBoxStartNode.Text);
-                numfinal = Convert.ToInt32(textBoxEndNode.Text) + 1;
+                numfinal = Convert.ToInt32(textBoxEndNode.Text);
                 g = new SearchTree();
                 Node2 N0 = new Node2();
                 N0.numero = numinitial;
@@ -135,8 +135,8 @@ namespace Source_Projet_IA
 
         public void GoBackToParentForm()
         {
-            this.Close();
             parent.Show();
+            this.Hide();
         }
 
         private bool VerifierRep(string rep, string attendu)
@@ -185,7 +185,18 @@ namespace Source_Projet_IA
 
         private void buttonNextStep_Click(object sender, EventArgs e)
         {
-            if(g.L_Ouverts.Count != 0 && N.EndState() == false)
+            if(N.EndState())
+            {
+                textBoxFermes.Text = GetFermés() + "," + numfinal;
+                textBoxOuverts.Text = "FIN !";
+                MessageBox.Show("Cliquez sur \"J'ai fini\" la prochaine fois" +
+                    "Fermés : " + GetFermés() + "," + numfinal +
+                    "\nOuverts : FIN !",
+                   "Mauvaise réponse !",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LaunchFormArbre();
+            }
+            else if(g.L_Ouverts.Count != 0)
             {
                 g.CalculerEtapeSuivante(ref g.L_Ouverts, ref g.L_Fermes, ref N);
                 string correctFerme = GetFermés(), correctOuvert = GetOuverts();
@@ -199,19 +210,16 @@ namespace Source_Projet_IA
                 else
                 {
                     CalculateEnd();
-                    textBoxFermes.Text = GetFermés();
-                    MessageBox.Show("Mauvaise réponse...\nVoici la correction de l'ensemble de l'algorithme:\n" +
-                        "Fermés : " + GetFermés() +
-                        "\nOuverts : " + GetOuverts());
+                    textBoxFermes.Text = GetFermés() + "," + numfinal;
                     textBoxOuverts.Text = "FIN !";
+                    textBoxFermes.Text = GetFermés();
+                    MessageBox.Show("Voici la correction de l'ensemble de l'algorithme:\n" +
+                     "Fermés : " + GetFermés() + "," + numfinal +
+                     "\nOuverts : FIN !",
+                    "Mauvaise réponse !",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LaunchFormArbre();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Mauvaise réponse...\nL'algorithme était terminé...\n" +
-                    "Cliquez sur \"J'ai fini\" la prochaine fois");
-                textBoxFermes.Text = GetFermés();
-                textBoxOuverts.Text = "FIN !";
             }
         }
 
@@ -227,20 +235,28 @@ namespace Source_Projet_IA
         private void buttonEndGame_Click(object sender, EventArgs e)
         {
             if (N.EndState())
-                MessageBox.Show("Bravo, c'est gagné");
+                MessageBox.Show("Bravo, c'est gagné", "Fin de la question", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information);
             else
             {
                 CalculateEnd();
                 textBoxFermes.Text = GetFermés();
+                MessageBox.Show("Voici la correction de l'ensemble de l'algorithme:\n" +
+                    "Fermés : " + GetFermés() + "," + numfinal +
+                    "\nOuverts : FIN !",
+                   "Mauvaise réponse !",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxFermes.Text = GetFermés() + "," + numfinal;
                 textBoxOuverts.Text = "FIN !";
-                MessageBox.Show("Mauvaise réponse...\nL'algorithme n'était pas encore terminé...\n" +
-                    "Voici la correction de l'ensemble de l'algorithme:\n" +
-                        "Fermés : " + GetFermés() +
-                        "\nOuverts : " + GetOuverts());
             }
-            g.GetSearchTree(treeView1, true);
-            /*this.Hide();
-            new FormArbre(listBoxgraphe, g, N0, matrice).Show();*/
+            LaunchFormArbre();
+        }
+
+        public void LaunchFormArbre()
+        {
+            this.Hide();
+            new FormArbre(parent, listBoxgraphe, g, N0, matrice).Show();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

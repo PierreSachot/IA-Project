@@ -74,7 +74,14 @@ namespace Source_Projet_IA
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             int nb = ((int)((LinkLabel)sender).Tag);
-            CurrentController.SetResponse(nb);
+            int correctAns = CurrentController.SetResponse(nb);
+            if(nb != correctAns)
+            {
+                MessageBox.Show("La bonne réponse était : " + 
+                    CurrentController.CurrentQuestion.LAnswers[CurrentController.CurrentQuestion.CorrectAnswer], 
+                    "Mauvaise réponse !",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             LoadQuestion();
         }
 
@@ -86,18 +93,26 @@ namespace Source_Projet_IA
         public void GoBackToParentForm()
         {
             MainForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         public void OpenScoreBox(int score, int scoreTotal)
         {
-            MessageBox.Show("Vous avez obtenu la note de "+score+"/"+scoreTotal+"" +
+            MessageBox.Show("Vous avez obtenu la note de "+score+"/"+scoreTotal+"\n" +
                 "soit "+(int)(((double)score /scoreTotal)*100)+"% de réponses correctes",
                 "Fin du questionnaire",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information,
                 MessageBoxDefaultButton.Button1);
-            MainForm.Show();
+            MainForm.IsFirstExDone = true;
+            if(MainForm.IsSecondExDone)
+            {
+                MainForm.Show();
+            }
+            else
+            {
+                new FormDijkstra(MainForm).Show();
+            }
             this.Hide();
         }
 

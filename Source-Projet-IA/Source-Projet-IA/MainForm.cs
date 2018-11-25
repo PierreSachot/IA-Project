@@ -16,6 +16,8 @@ namespace Source_Projet_IA
     {
         FormQuestionnaire questionnaire;
         FormDijkstra dijkstra;
+        public bool IsFirstExDone;
+        public bool IsSecondExDone;
 
         public MainForm()
         {

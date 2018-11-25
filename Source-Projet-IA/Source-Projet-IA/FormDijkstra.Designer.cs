@@ -43,9 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxRepOuvert = new System.Windows.Forms.TextBox();
             this.buttonEndGame = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,16 +182,6 @@
             this.buttonEndGame.UseVisualStyleBackColor = true;
             this.buttonEndGame.Click += new System.EventHandler(this.buttonEndGame_Click);
             // 
-            // buttonBack
-            // 
-            this.buttonBack.Location = new System.Drawing.Point(13, 9);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(115, 23);
-            this.buttonBack.TabIndex = 20;
-            this.buttonBack.Text = "< Menu principal";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(171, 81);
@@ -202,21 +190,12 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(716, 93);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(202, 212);
-            this.treeView1.TabIndex = 22;
-            // 
             // FormDijkstra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 446);
-            this.Controls.Add(this.treeView1);
+            this.ClientSize = new System.Drawing.Size(668, 446);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonEndGame);
             this.Controls.Add(this.textBoxRepOuvert);
             this.Controls.Add(this.label5);
@@ -257,9 +236,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxRepOuvert;
         private System.Windows.Forms.Button buttonEndGame;
-        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TreeView treeView1;
     }
 }
 
