@@ -68,6 +68,7 @@
             this.textBoxEndNode.Size = new System.Drawing.Size(100, 20);
             this.textBoxEndNode.TabIndex = 2;
             this.textBoxEndNode.Text = "8";
+            this.textBoxEndNode.TextChanged += new System.EventHandler(this.textBoxEndNode_TextChanged);
             // 
             // label1
             // 

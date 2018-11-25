@@ -58,7 +58,7 @@
             this.panelQuestion.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelQuestion.Location = new System.Drawing.Point(0, 0);
             this.panelQuestion.Name = "panelQuestion";
-            this.panelQuestion.Size = new System.Drawing.Size(1062, 57);
+            this.panelQuestion.Size = new System.Drawing.Size(1062, 55);
             this.panelQuestion.TabIndex = 0;
             // 
             // labelQuestions
@@ -76,7 +76,7 @@
             this.dynamicQuestionLabel.AutoSize = true;
             this.dynamicQuestionLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dynamicQuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dynamicQuestionLabel.Location = new System.Drawing.Point(0, 33);
+            this.dynamicQuestionLabel.Location = new System.Drawing.Point(0, 31);
             this.dynamicQuestionLabel.Name = "dynamicQuestionLabel";
             this.dynamicQuestionLabel.Size = new System.Drawing.Size(160, 24);
             this.dynamicQuestionLabel.TabIndex = 1;
@@ -86,11 +86,11 @@
             // 
             this.questionLabel.AutoSize = true;
             this.questionLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.questionLabel.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.ForeColor = System.Drawing.Color.SteelBlue;
             this.questionLabel.Location = new System.Drawing.Point(0, 0);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(113, 33);
+            this.questionLabel.Size = new System.Drawing.Size(138, 31);
             this.questionLabel.TabIndex = 0;
             this.questionLabel.Text = "Question :";
             // 
@@ -99,9 +99,9 @@
             this.panelAnswers.Controls.Add(this.groupBoxReponses);
             this.panelAnswers.Controls.Add(this.pictureBox);
             this.panelAnswers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAnswers.Location = new System.Drawing.Point(0, 57);
+            this.panelAnswers.Location = new System.Drawing.Point(0, 55);
             this.panelAnswers.Name = "panelAnswers";
-            this.panelAnswers.Size = new System.Drawing.Size(1062, 624);
+            this.panelAnswers.Size = new System.Drawing.Size(1062, 626);
             this.panelAnswers.TabIndex = 1;
             // 
             // groupBoxReponses
@@ -112,7 +112,7 @@
             this.groupBoxReponses.Controls.Add(this.linkLabel3);
             this.groupBoxReponses.Controls.Add(this.linkLabel2);
             this.groupBoxReponses.Controls.Add(this.linkLabel1);
-            this.groupBoxReponses.Location = new System.Drawing.Point(191, 413);
+            this.groupBoxReponses.Location = new System.Drawing.Point(191, 415);
             this.groupBoxReponses.Name = "groupBoxReponses";
             this.groupBoxReponses.Size = new System.Drawing.Size(702, 160);
             this.groupBoxReponses.TabIndex = 7;

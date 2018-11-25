@@ -166,7 +166,7 @@
             this.Controls.Add(this.textBoxFinalNode);
             this.Controls.Add(this.textBoxInitialNode);
             this.Name = "FormArbre";
-            this.Text = "FormArbre";
+            this.Text = "Dijkstra - Arbre de recherche";
             this.ResumeLayout(false);
             this.PerformLayout();
 
