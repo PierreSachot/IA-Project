@@ -10,6 +10,7 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Threading;
 using Domain;
+using System.Timers;
 
 namespace Source_Projet_IA
 {
@@ -17,16 +18,27 @@ namespace Source_Projet_IA
     {
         private Controller CurrentController;
         private MainForm MainForm;
+        public System.Timers.Timer aTimer;
 
         public FormQuestionnaire(MainForm form)
         {
-            Thread.Sleep(500);
             MainForm = form;
             CurrentController = new Controller(this);
             InitializeComponent();
-            Thread.Sleep(100);
             LoadQuestion();
+            aTimer = new System.Timers.Timer();
+            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            aTimer.Interval = 150;
+            aTimer.Enabled = true;
         }
+
+        // Specify what you want to happen when the Elapsed event is raised.
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+            aTimer.Enabled = false;
+            this.Invoke(new Action(ResizeComponents));
+        }
+
         public void LoadQuestion()
         {
             try
@@ -38,10 +50,8 @@ namespace Source_Projet_IA
                 linkLabel2.Text = CurrentController.CurrentQuestion.LAnswers[1];
                 linkLabel3.Text = CurrentController.CurrentQuestion.LAnswers[2];
                 linkLabel4.Text = CurrentController.CurrentQuestion.LAnswers[3];
-                ResizeComponents();
                 if (CurrentController.CurrentQuestion.ImgURL == "")
                 {
-                    //groupBoxReponses.Anchor = System.Windows.Forms.AnchorStyles.Top;
                     pictureBox.Hide();
                 }
                 else
@@ -49,8 +59,8 @@ namespace Source_Projet_IA
                     pictureBox.Image = Image.FromFile(CurrentController.CurrentQuestion.ImgURL);
                     pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                     pictureBox.Show();
-                    //groupBoxReponses.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
                 }
+                ResizeComponents();
             }
             catch(Exception e)
             {
