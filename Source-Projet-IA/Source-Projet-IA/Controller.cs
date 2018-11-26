@@ -12,20 +12,23 @@ namespace Source_Projet_IA
     {
         public static readonly int NB_QUESTIONS = 20;
         private XML_Reader Reader { get; set; }
-        public int Score { get; private set; }
-        public int ScoreTotal { get; private set; }
+        public int ScoreQCM { get; private set; }
+        public int ScoreTotalQCM { get; private set; }
+        public int ScoreDijkstra { get; set; }
+        public int ScoreTotalDijkstra { get; set; }
         public List<int> QuestionsTraitees { get; set; }
         public Question CurrentQuestion { get; private set; }
 
-        public FormQuestionnaire QuestionnaireForm { get; private set; }
+        public FormQuestionnaire QuestionnaireForm { get; set; }
 
 
-        public Controller(FormQuestionnaire questionnaire)
+        public Controller()
         {
-            QuestionnaireForm = questionnaire;
             Reader = new XML_Reader(); ;
-            Score = 0;
-            ScoreTotal = 0;
+            ScoreQCM = 0;
+            ScoreTotalQCM = 0;
+            ScoreDijkstra = 0;
+            ScoreTotalDijkstra = 3;
             QuestionsTraitees = new List<int>();
         }
 
@@ -33,7 +36,7 @@ namespace Source_Projet_IA
         {
             if(QuestionsTraitees.Count() >= NB_QUESTIONS)
             {
-                QuestionnaireForm.OpenScoreBox(Score, ScoreTotal);
+                QuestionnaireForm.OpenScoreBox(ScoreQCM, ScoreTotalQCM);
             }
             else
             {
@@ -57,8 +60,8 @@ namespace Source_Projet_IA
         public int SetResponse(int index)
         {
             if (CurrentQuestion.CorrectAnswer == index)
-                Score += CurrentQuestion.NbPoints;
-            ScoreTotal += CurrentQuestion.NbPoints;
+                ScoreQCM += CurrentQuestion.NbPoints;
+            ScoreTotalQCM += CurrentQuestion.NbPoints;
             return CurrentQuestion.CorrectAnswer;
         }
     }

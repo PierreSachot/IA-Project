@@ -99,9 +99,9 @@
             // 
             // buttonEndGame
             // 
-            this.buttonEndGame.Location = new System.Drawing.Point(477, 414);
+            this.buttonEndGame.Location = new System.Drawing.Point(406, 414);
             this.buttonEndGame.Name = "buttonEndGame";
-            this.buttonEndGame.Size = new System.Drawing.Size(75, 23);
+            this.buttonEndGame.Size = new System.Drawing.Size(146, 23);
             this.buttonEndGame.TabIndex = 20;
             this.buttonEndGame.Text = "J\'ai fini !";
             this.buttonEndGame.UseVisualStyleBackColor = true;

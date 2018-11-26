@@ -16,19 +16,19 @@ namespace Source_Projet_IA
 {
     public partial class FormQuestionnaire : Form
     {
-        private Controller CurrentController;
+        public Controller CurrentController;
         private MainForm MainForm;
         public System.Timers.Timer aTimer;
 
-        public FormQuestionnaire(MainForm form)
+        public FormQuestionnaire(MainForm form, Controller c)
         {
             MainForm = form;
-            CurrentController = new Controller(this);
+            CurrentController = c;
             InitializeComponent();
             LoadQuestion();
             aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Interval = 150;
+            aTimer.Interval = 100;
             aTimer.Enabled = true;
         }
 
@@ -114,16 +114,7 @@ namespace Source_Projet_IA
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information,
                 MessageBoxDefaultButton.Button1);
-            MainForm.IsFirstExDone = true;
-            if(MainForm.IsSecondExDone)
-            {
-                MainForm.Show();
-            }
-            else
-            {
-                new FormDijkstra(MainForm).Show();
-            }
-            this.Hide();
+            MainForm.ExDone(this);
         }
 
         private void Questionnaire_FormClosing(object sender, FormClosingEventArgs e)

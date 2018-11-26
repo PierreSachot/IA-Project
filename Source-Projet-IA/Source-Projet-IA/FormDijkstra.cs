@@ -235,9 +235,12 @@ namespace Source_Projet_IA
         private void buttonEndGame_Click(object sender, EventArgs e)
         {
             if (N.EndState())
-                MessageBox.Show("Bravo, c'est gagné", "Fin de la question", 
-                    MessageBoxButtons.OK, 
+            {
+                MessageBox.Show("Bravo, c'est gagné", "Fin de la question",
+                    MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+                parent.Controller.ScoreDijkstra = 2;
+            }
             else
             {
                 CalculateEnd();
