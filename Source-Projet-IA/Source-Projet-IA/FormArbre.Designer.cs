@@ -190,6 +190,7 @@
             this.Controls.Add(this.textBoxFinalNode);
             this.Controls.Add(this.textBoxInitialNode);
             this.Name = "FormArbre";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dijkstra - Arbre de recherche";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormArbre_FormClosing);
             this.Astuce.ResumeLayout(false);

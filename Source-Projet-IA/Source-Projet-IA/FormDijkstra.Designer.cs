@@ -212,6 +212,7 @@
             this.Controls.Add(this.textBoxEndNode);
             this.Controls.Add(this.textBoxStartNode);
             this.Name = "FormDijkstra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exercie Dijkstra";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDijkstra_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
