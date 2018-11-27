@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.labelResultPart2 = new System.Windows.Forms.Label();
+            this.labelResultPart1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonStartDijkstra = new System.Windows.Forms.Button();
             this.buttonStartQCM = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.labelResultPart1 = new System.Windows.Forms.Label();
-            this.labelResultPart2 = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,24 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(597, 223);
             this.mainPanel.TabIndex = 0;
+            // 
+            // labelResultPart2
+            // 
+            this.labelResultPart2.AutoSize = true;
+            this.labelResultPart2.Location = new System.Drawing.Point(12, 203);
+            this.labelResultPart2.Name = "labelResultPart2";
+            this.labelResultPart2.Size = new System.Drawing.Size(99, 13);
+            this.labelResultPart2.TabIndex = 5;
+            this.labelResultPart2.Text = "Résultat Dijkstra : ?";
+            // 
+            // labelResultPart1
+            // 
+            this.labelResultPart1.AutoSize = true;
+            this.labelResultPart1.Location = new System.Drawing.Point(12, 190);
+            this.labelResultPart1.Name = "labelResultPart1";
+            this.labelResultPart1.Size = new System.Drawing.Size(88, 13);
+            this.labelResultPart1.TabIndex = 4;
+            this.labelResultPart1.Text = "Résultat QCM : ?";
             // 
             // label1
             // 
@@ -102,24 +120,6 @@
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Menu principal";
             // 
-            // labelResultPart1
-            // 
-            this.labelResultPart1.AutoSize = true;
-            this.labelResultPart1.Location = new System.Drawing.Point(12, 190);
-            this.labelResultPart1.Name = "labelResultPart1";
-            this.labelResultPart1.Size = new System.Drawing.Size(88, 13);
-            this.labelResultPart1.TabIndex = 4;
-            this.labelResultPart1.Text = "Résultat QCM : ?";
-            // 
-            // labelResultPart2
-            // 
-            this.labelResultPart2.AutoSize = true;
-            this.labelResultPart2.Location = new System.Drawing.Point(12, 203);
-            this.labelResultPart2.Name = "labelResultPart2";
-            this.labelResultPart2.Size = new System.Drawing.Size(99, 13);
-            this.labelResultPart2.TabIndex = 5;
-            this.labelResultPart2.Text = "Résultat Dijkstra : ?";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +127,7 @@
             this.ClientSize = new System.Drawing.Size(597, 223);
             this.Controls.Add(this.mainPanel);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Examen Intelligence Artificielle";
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
