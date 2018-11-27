@@ -53,6 +53,10 @@ namespace Source_Projet_IA
                 {
                     LoadDijkstra();
                 }
+                else
+                {
+                    this.Show();
+                }
             }
             else
             {
@@ -65,6 +69,10 @@ namespace Source_Projet_IA
                 if (!IsFirstExDone)
                 {
                     LoadQuestionnaire();
+                }
+                else
+                {
+                    this.Show();
                 }
             }
         }

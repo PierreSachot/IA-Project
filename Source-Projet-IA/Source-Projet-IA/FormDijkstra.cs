@@ -25,6 +25,7 @@ namespace Source_Projet_IA
         public GenericNode N;
 
         private MainForm parent;
+        private bool formClosed;
 
         public FormDijkstra(MainForm mainForm)
         {
@@ -130,13 +131,12 @@ namespace Source_Projet_IA
 
         private void FormDijkstra_FormClosing(object sender, FormClosingEventArgs e)
         {
-            GoBackToParentForm();
-        }
-
-        public void GoBackToParentForm()
-        {
-            parent.Show();
-            this.Hide();
+            //Fait pour éviter le infinite loop => stackOverFlow Exception lorsque la form est fermée
+            if (!formClosed)
+            {
+                this.formClosed = true;
+                parent.ExDone(this);
+            }
         }
 
         private bool VerifierRep(string rep, string attendu)
@@ -258,13 +258,9 @@ namespace Source_Projet_IA
 
         public void LaunchFormArbre()
         {
+            formClosed = true;
             this.Hide();
             new FormArbre(parent, listBoxgraphe, g, N0, matrice).Show();
-        }
-
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            GoBackToParentForm();
         }
     }
 }

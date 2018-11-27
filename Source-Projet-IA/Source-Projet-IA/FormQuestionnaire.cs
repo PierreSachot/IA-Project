@@ -19,6 +19,7 @@ namespace Source_Projet_IA
         public Controller CurrentController;
         private MainForm MainForm;
         public System.Timers.Timer aTimer;
+        public bool formClosed;
 
         public FormQuestionnaire(MainForm form, Controller c)
         {
@@ -74,6 +75,9 @@ namespace Source_Projet_IA
 
         public void ResizeComponents()
         {
+            int yGb = groupBoxReponses.Location.Y;
+            int yPb = pictureBox.Location.Y;
+            pictureBox.Size = new Size(groupBoxReponses.Size.Width, yGb - yPb);
             linkLabel1.Left = (this.groupBoxReponses.Width / 2) - (linkLabel1.Width / 2);
             linkLabel2.Left = (this.groupBoxReponses.Width / 2) - (linkLabel2.Width / 2);
             linkLabel3.Left = (this.groupBoxReponses.Width / 2) - (linkLabel3.Width / 2);
@@ -115,11 +119,17 @@ namespace Source_Projet_IA
                 MessageBoxIcon.Information,
                 MessageBoxDefaultButton.Button1);
             MainForm.ExDone(this);
+            formClosed = true;
         }
 
         private void Questionnaire_FormClosing(object sender, FormClosingEventArgs e)
         {
-            GoBackToParentForm();
+            //Fait pour éviter le infinite loop => stackOverFlow Exception lorsque la form est fermée
+            if (!formClosed)
+            {
+                this.formClosed = true;
+                MainForm.ExDone(this);
+            }
         }
     }
 }

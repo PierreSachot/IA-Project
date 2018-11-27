@@ -18,6 +18,7 @@ namespace Source_Projet_IA
         private SearchTree g;
         private MainForm parent;
         private bool aFini;
+        private bool formClosed;
 
         public FormArbre(MainForm parent, ListBox precedentResult, SearchTree g, Node2 N0, double[,] matrice)
         {
@@ -40,6 +41,7 @@ namespace Source_Projet_IA
         {
             if(aFini)
             {
+                formClosed = true;
                 parent.ExDone(this);
             }
             else
@@ -89,6 +91,16 @@ namespace Source_Projet_IA
             for (int i = 0; i < compare; i++)
             {
                 CompareRecursiveTree(tn1.Nodes[i], tn2.Nodes[i], isScoreDone);
+            }
+        }
+
+        private void FormArbre_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Fait pour éviter le infinite loop => stackOverFlow Exception lorsque la form est fermée
+            if (!formClosed)
+            {
+                this.formClosed = true;
+                parent.ExDone(this);
             }
         }
     }
