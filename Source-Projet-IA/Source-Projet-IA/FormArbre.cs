@@ -37,6 +37,12 @@ namespace Source_Projet_IA
             this.g = g;
             g.GetSearchTree(treeView1, true);
         }
+
+        /// <summary>
+        /// Permet de gérer le clique sur le bouton de fin d'exercice
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonEndGame_Click(object sender, EventArgs e)
         {
             if(aFini)
@@ -55,6 +61,11 @@ namespace Source_Projet_IA
             }
         }
 
+        /// <summary>
+        /// Permet de comparer 2 TreeView afin de connaître les différences (affichage en rouge si différences)
+        /// </summary>
+        /// <param name="tv1"></param>
+        /// <param name="tv2"></param>
         void CompareTreeNodes(TreeView tv1, TreeView tv2)
         {
             int compare = Math.Min(tv1.Nodes.Count, tv2.Nodes.Count);
@@ -66,6 +77,12 @@ namespace Source_Projet_IA
             }
         }
 
+        /// <summary>
+        /// Permet de comparer récursivement 2 TreeNode.
+        /// </summary>
+        /// <param name="tn1"></param>
+        /// <param name="tn2"></param>
+        /// <param name="isScoreDone"></param>
         private void CompareRecursiveTree(TreeNode tn1, TreeNode tn2, bool isScoreDone)
         {
             if (tn1.Text != tn2.Text)
@@ -93,6 +110,12 @@ namespace Source_Projet_IA
             }
         }
 
+        /// <summary>
+        /// Permet de gérer la fermeture d'un formulaire afin de considérer l'exercice comme terminé.
+        /// L'attribut formClosed permet de palier à l'exception stackOverflow.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormArbre_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!formClosed)

@@ -129,6 +129,12 @@ namespace Source_Projet_IA
             }
         }
 
+        /// <summary>
+        /// Permet de gérer la fermeture d'un formulaire afin de considérer l'exercice comme terminé.
+        /// L'attribut formClosed permet de palier à l'exception stackOverflow.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormDijkstra_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(!formClosed)
@@ -136,6 +142,12 @@ namespace Source_Projet_IA
             formClosed = true;
         }
 
+        /// <summary>
+        /// Permet de vérifier la réponse d'un utilisateur
+        /// </summary>
+        /// <param name="rep"></param>
+        /// <param name="attendu"></param>
+        /// <returns></returns>
         private bool VerifierRep(string rep, string attendu)
         {
             bool estOk = true;
@@ -157,6 +169,11 @@ namespace Source_Projet_IA
             }
             return estOk;
         }
+
+        /// <summary>
+        /// Permet de récupérer la liste des ouverts sous forme d'un string
+        /// </summary>
+        /// <returns></returns>
         public string GetOuverts()
         {
             string result = "";
@@ -168,6 +185,11 @@ namespace Source_Projet_IA
                 result = result.Remove(result.Length - 1);
             return result;
         }
+
+        /// <summary>
+        /// Permet de récupérer la liste des fermés sous forme d'un string
+        /// </summary>
+        /// <returns></returns>
         public string GetFermés()
         {
             string result = "";
@@ -180,6 +202,11 @@ namespace Source_Projet_IA
             return result;
         }
 
+        /// <summary>
+        /// Permet de gérer l'appuie sur le bouton "Étape suivante"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonNextStep_Click(object sender, EventArgs e)
         {
             if(N.EndState())
@@ -220,7 +247,9 @@ namespace Source_Projet_IA
             }
         }
 
-
+        /// <summary>
+        /// Permet de finir l'exercice en cas d'erreur.
+        /// </summary>
         private void CalculateEnd()
         {
             while (g.L_Ouverts.Count != 0 && N.EndState() == false)
@@ -229,6 +258,11 @@ namespace Source_Projet_IA
             }
         }
 
+        /// <summary>
+        /// Permet de gérer le clique sur le bouton "J'ai fini !"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonEndGame_Click(object sender, EventArgs e)
         {
             if (N.EndState())
@@ -253,6 +287,9 @@ namespace Source_Projet_IA
             LaunchFormArbre();
         }
 
+        /// <summary>
+        /// Permet de lancer la seconde partie de l'exercice.
+        /// </summary>
         public void LaunchFormArbre()
         {
             formClosed = true;

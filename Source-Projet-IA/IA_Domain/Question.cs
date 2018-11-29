@@ -14,6 +14,14 @@ namespace Domain
         public int CorrectAnswer { get; set; }
         public int NbPoints { get; set; }
 
+        /// <summary>
+        /// Permet de créer une question
+        /// </summary>
+        /// <param name="title">titre</param>
+        /// <param name="imgURL">url de l'image à afficher</param>
+        /// <param name="lAnswers">liste des réponses possibles</param>
+        /// <param name="correctAnswer">index de la réponse correcte</param>
+        /// <param name="nbPoints">nombre de points que la réponse rapporte</param>
         public Question(string title, string imgURL, List<string> lAnswers, int correctAnswer, int nbPoints)
         {
             Title = title;
