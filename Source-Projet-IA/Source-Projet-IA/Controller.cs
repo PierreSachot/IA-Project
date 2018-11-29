@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DAL;
 using Domain;
 
@@ -19,7 +20,12 @@ namespace Source_Projet_IA
         public List<int> QuestionsTraitees { get; set; }
         public Question CurrentQuestion { get; private set; }
 
-        public FormQuestionnaire QuestionnaireForm { get; set; }
+        public MainForm MainForm { get; set; }
+        
+        private FormQuestionnaire questionnaire;
+        private FormDijkstra dijkstra;
+        public bool IsFirstExDone { get; private set; }
+        public bool IsSecondExDone { get; private set; }
 
 
         public Controller()
@@ -32,11 +38,64 @@ namespace Source_Projet_IA
             QuestionsTraitees = new List<int>();
         }
 
+        public void ExDone(Form type)
+        {
+            if (type is FormQuestionnaire)
+            {
+                MainForm.buttonStartQCM.Enabled = false;
+                IsFirstExDone = true;
+                if(((FormQuestionnaire)type).formClosed)
+                    type.Close();
+                MainForm.labelResultPart1.Text = "Résultat QCM : " + ScoreQCM + "/" + ScoreTotalQCM;
+                if (!IsSecondExDone)
+                {
+                    LoadDijkstra();
+                }
+                else
+                {
+                    MainForm.Show();
+                }
+            }
+            else
+            {
+                if ((type is FormArbre && ((FormArbre)type).formClosed) 
+                    || (type is FormDijkstra && ((FormDijkstra)type).formClosed))
+                    type.Close();
+                MainForm.buttonStartDijkstra.Enabled = false;
+                IsSecondExDone = true;
+                MainForm.labelResultPart2.Text = "Résultat Dijkstra : " + ScoreDijkstra + "/"
+                    + ScoreTotalDijkstra;
+                if (!IsFirstExDone)
+                {
+                    LoadQuestionnaire();
+                }
+                else
+                {
+                    MainForm.Show();
+                }
+            }
+        }
+
+        public void LoadDijkstra()
+        {
+            IsSecondExDone = true;
+            MainForm.Hide();
+            dijkstra = new FormDijkstra(this);
+            dijkstra.Show();
+        }
+        public void LoadQuestionnaire()
+        {
+            IsFirstExDone = true;
+            MainForm.Hide();
+            questionnaire = new FormQuestionnaire(this);
+            questionnaire.Show();
+        }
+
         public void LoadNextQuestion()
         {
             if(QuestionsTraitees.Count() >= NB_QUESTIONS)
             {
-                QuestionnaireForm.OpenScoreBox(ScoreQCM, ScoreTotalQCM);
+                questionnaire.OpenScoreBox(ScoreQCM, ScoreTotalQCM);
             }
             else
             {

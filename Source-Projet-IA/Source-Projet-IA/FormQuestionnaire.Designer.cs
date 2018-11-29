@@ -218,7 +218,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Questionnaire";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Questionnaire_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormQuestionnaire_FormClosing);
             this.panelQuestion.ResumeLayout(false);
             this.panelQuestion.PerformLayout();
             this.panelAnswers.ResumeLayout(false);

@@ -16,11 +16,11 @@ namespace Source_Projet_IA
         private int noeudInitial;
         private int noeudFinal;
         private SearchTree g;
-        private MainForm parent;
+        private Controller Controller;
         private bool aFini;
-        private bool formClosed;
+        public bool formClosed;
 
-        public FormArbre(MainForm parent, ListBox precedentResult, SearchTree g, Node2 N0, double[,] matrice)
+        public FormArbre(Controller c, ListBox precedentResult, SearchTree g, Node2 N0, double[,] matrice)
         {
             InitializeComponent();
             noeudInitial = FormDijkstra.numinitial;
@@ -28,7 +28,7 @@ namespace Source_Projet_IA
             FormDijkstra.numfinal--;
             textBoxInitialNode.Text = noeudInitial+"";
             textBoxFinalNode.Text = "" + noeudFinal;
-            this.parent = parent;
+            this.Controller = c;
             foreach (var l in precedentResult.Items)
             {
                 listBox1.Items.Add(l);
@@ -41,16 +41,15 @@ namespace Source_Projet_IA
         {
             if(aFini)
             {
-                formClosed = true;
-                parent.ExDone(this);
+                Controller.ExDone(this);
             }
             else
             {
                 TreeView correction = new TreeView();
                 g.GetSearchTree(treeView2, false);
                 CompareTreeNodes(treeView2, treeView1);
-                MessageBox.Show("Vous avez obtenu le score de " + parent.Controller.ScoreDijkstra
-                    + "/" + parent.Controller.ScoreTotalDijkstra);
+                MessageBox.Show("Vous avez obtenu le score de " + Controller.ScoreDijkstra
+                    + "/" + Controller.ScoreTotalDijkstra);
                 this.buttonEndGame.Text = "Passer à la suite";
                 aFini = true;
             }
@@ -60,7 +59,7 @@ namespace Source_Projet_IA
         {
             int compare = Math.Min(tv1.Nodes.Count, tv2.Nodes.Count);
             // ignore extra nodes
-            parent.Controller.ScoreDijkstra += 1;
+            Controller.ScoreDijkstra += 1;
             for (int i = 0; i < compare; i++)
             {
                 CompareRecursiveTree(tv1.Nodes[i], tv2.Nodes[i], false);
@@ -75,7 +74,7 @@ namespace Source_Projet_IA
                 tn2.ForeColor = Color.Red;
                 if (!isScoreDone)
                 {
-                    parent.Controller.ScoreDijkstra--;
+                    Controller.ScoreDijkstra--;
                     isScoreDone = true;
                 }
 
@@ -96,12 +95,9 @@ namespace Source_Projet_IA
 
         private void FormArbre_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Fait pour éviter le infinite loop => stackOverFlow Exception lorsque la form est fermée
             if (!formClosed)
-            {
-                this.formClosed = true;
-                parent.ExDone(this);
-            }
+                Controller.ExDone(this);
+            formClosed = true;
         }
     }
 }

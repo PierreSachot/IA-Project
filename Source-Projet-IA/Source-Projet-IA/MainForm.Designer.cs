@@ -120,13 +120,13 @@
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Menu principal";
             // 
-            // MainForm
+            // Controller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 223);
             this.Controls.Add(this.mainPanel);
-            this.Name = "MainForm";
+            this.Name = "Controller";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Examen Intelligence Artificielle";
             this.mainPanel.ResumeLayout(false);
@@ -138,12 +138,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Button buttonStartQCM;
-        private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.Button buttonStartDijkstra;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelResultPart2;
-        private System.Windows.Forms.Label labelResultPart1;
+        public System.Windows.Forms.Panel mainPanel;
+        public System.Windows.Forms.Button buttonStartQCM;
+        public System.Windows.Forms.Label titleLabel;
+        public System.Windows.Forms.Button buttonStartDijkstra;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label labelResultPart2;
+        public System.Windows.Forms.Label labelResultPart1;
     }
 }

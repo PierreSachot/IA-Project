@@ -24,12 +24,12 @@ namespace Source_Projet_IA
         public Node2 N0;
         public GenericNode N;
 
-        private MainForm parent;
-        private bool formClosed;
+        private Controller Controller;
+        public bool formClosed;
 
-        public FormDijkstra(MainForm mainForm)
+        public FormDijkstra(Controller c)
         {
-            parent = mainForm;
+            Controller = c;
             InitializeComponent();
 
             pictureBox1.Image = Image.FromFile("Images/Partie2_Dijkstra.PNG");
@@ -131,12 +131,9 @@ namespace Source_Projet_IA
 
         private void FormDijkstra_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Fait pour éviter le infinite loop => stackOverFlow Exception lorsque la form est fermée
-            if (!formClosed)
-            {
-                this.formClosed = true;
-                parent.ExDone(this);
-            }
+            if(!formClosed)
+                Controller.ExDone(this);
+            formClosed = true;
         }
 
         private bool VerifierRep(string rep, string attendu)
@@ -239,7 +236,7 @@ namespace Source_Projet_IA
                 MessageBox.Show("Bravo, c'est gagné", "Fin de la question",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-                parent.Controller.ScoreDijkstra = 2;
+                Controller.ScoreDijkstra = 2;
             }
             else
             {
@@ -260,7 +257,7 @@ namespace Source_Projet_IA
         {
             formClosed = true;
             this.Hide();
-            new FormArbre(parent, listBoxgraphe, g, N0, matrice).Show();
+            new FormArbre(Controller, listBoxgraphe, g, N0, matrice).Show();
         }
     }
 }

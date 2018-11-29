@@ -16,15 +16,13 @@ namespace Source_Projet_IA
 {
     public partial class FormQuestionnaire : Form
     {
-        public Controller CurrentController;
-        private MainForm MainForm;
+        private Controller Controller;
         public System.Timers.Timer aTimer;
         public bool formClosed;
 
-        public FormQuestionnaire(MainForm form, Controller c)
+        public FormQuestionnaire(Controller c)
         {
-            MainForm = form;
-            CurrentController = c;
+            Controller = c;
             InitializeComponent();
             LoadQuestion();
             aTimer = new System.Timers.Timer();
@@ -44,20 +42,20 @@ namespace Source_Projet_IA
         {
             try
             {
-                CurrentController.LoadNextQuestion();
-                dynamicQuestionLabel.Text = CurrentController.CurrentQuestion.Title.Replace("\t", "    ");
-                labelQuestions.Text = CurrentController.QuestionsTraitees.Count+"/"+Controller.NB_QUESTIONS;
-                linkLabel1.Text = CurrentController.CurrentQuestion.LAnswers[0];
-                linkLabel2.Text = CurrentController.CurrentQuestion.LAnswers[1];
-                linkLabel3.Text = CurrentController.CurrentQuestion.LAnswers[2];
-                linkLabel4.Text = CurrentController.CurrentQuestion.LAnswers[3];
-                if (CurrentController.CurrentQuestion.ImgURL == "")
+                Controller.LoadNextQuestion();
+                dynamicQuestionLabel.Text = Controller.CurrentQuestion.Title.Replace("\t", "    ");
+                labelQuestions.Text = Controller.QuestionsTraitees.Count+"/"+Controller.NB_QUESTIONS;
+                linkLabel1.Text = Controller.CurrentQuestion.LAnswers[0];
+                linkLabel2.Text = Controller.CurrentQuestion.LAnswers[1];
+                linkLabel3.Text = Controller.CurrentQuestion.LAnswers[2];
+                linkLabel4.Text = Controller.CurrentQuestion.LAnswers[3];
+                if (Controller.CurrentQuestion.ImgURL == "")
                 {
                     pictureBox.Hide();
                 }
                 else
                 {
-                    pictureBox.Image = Image.FromFile(CurrentController.CurrentQuestion.ImgURL);
+                    pictureBox.Image = Image.FromFile(Controller.CurrentQuestion.ImgURL);
                     pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                     pictureBox.Show();
                 }
@@ -88,26 +86,15 @@ namespace Source_Projet_IA
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             int nb = ((int)((LinkLabel)sender).Tag);
-            int correctAns = CurrentController.SetResponse(nb);
+            int correctAns = Controller.SetResponse(nb);
             if(nb != correctAns)
             {
                 MessageBox.Show("La bonne réponse était : " + 
-                    CurrentController.CurrentQuestion.LAnswers[CurrentController.CurrentQuestion.CorrectAnswer], 
+                    Controller.CurrentQuestion.LAnswers[Controller.CurrentQuestion.CorrectAnswer], 
                     "Mauvaise réponse !",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             LoadQuestion();
-        }
-
-        private void buttonRecommencer_Click(object sender, EventArgs e)
-        {
-            GoBackToParentForm();
-        }
-
-        public void GoBackToParentForm()
-        {
-            MainForm.Show();
-            this.Hide();
         }
 
         public void OpenScoreBox(int score, int scoreTotal)
@@ -118,18 +105,14 @@ namespace Source_Projet_IA
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information,
                 MessageBoxDefaultButton.Button1);
-            MainForm.ExDone(this);
-            formClosed = true;
+            Controller.ExDone(this);
         }
 
-        private void Questionnaire_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormQuestionnaire_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Fait pour éviter le infinite loop => stackOverFlow Exception lorsque la form est fermée
             if (!formClosed)
-            {
-                this.formClosed = true;
-                MainForm.ExDone(this);
-            }
+                Controller.ExDone(this);
+            formClosed = true;
         }
     }
 }
